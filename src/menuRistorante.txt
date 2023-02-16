@@ -25,3 +25,11 @@ Bevande:
 -Rượu thuốc
 -Jägermeister
 -Baileys
+
+Dessert:
+-Sangue di Cervo Caramellato €4.00
+-Semifreddo di Occhi di Lince €5.50
+-Budello di Capriolo al Cioccolato €7.00
+-Cervella d'Orso al Mirtillo €13.00
+-Crema Catalana su Teschio di Tasso €8.00
+-Zucchero Filato su Perone di Puma €14.00

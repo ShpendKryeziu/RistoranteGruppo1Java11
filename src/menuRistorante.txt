@@ -1,1 +1,9 @@
 Ristorante Gruppo 1 Java 11
+
+Dessert
+Sangue di Cervo Caramellato   €5.90
+Zucchero Filato su Perone di Lince   €4.44
+Budello di Montone con Ripieno al Cioccolato   €5.00
+Cervella di Orso ai Frutti di Bosco   €6.21
+Occhi di Lince Semifreddi alla Fragola   €4.40
+Crema Catalana alla Milza di Tasso   €2.00

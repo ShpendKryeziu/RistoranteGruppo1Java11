@@ -15,5 +15,14 @@ public class Main {
         Bevande baileys = new Bevande("Baileys", 3.5);
         Bevande caffe = new Bevande("Caffè", 1.5);
         System.out.println("Le bevande sono: " + Bevande.getTutteLeBevande());
+
+        //DESSERT
+        Dessert sangueDiCervoCaramellato = new Dessert("Sangue di Cervo caramellato", 4.00);
+        Dessert semifreddoDiOcchiDiLince = new Dessert("Semifreddo di occhi di Lince", 5.50);
+        Dessert budelloDiCaprioloAlCioccolato = new Dessert("Budello di Capriolo al cioccolato",7.00);
+        Dessert cervellaDOrsoAlMirtillo = new Dessert("Cervella d'Orso al mirtillo",13.00);
+        Dessert cremaCatalanaSuTeschioDiTasso = new Dessert("Crema Catalana su teschio di Tasso",8.00);
+        Dessert zuccheroFilatoSuPeroneDiPuma = new Dessert("Zucchero filato su perone di Puma",14.00);
+        System.out.println("Le bevande sono : " + Dessert.getTuttiIDessert());
     }
 }

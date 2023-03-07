@@ -1,5 +1,6 @@
 public class Main {
     public static void main(String[] args) {
+        System.out.println("|_-'-_| Menù di Carne |_-'-_|");
         System.out.println("Le bevande sono: " + Bevande.getTutteLeBevande());
         Bevande acqua = new Bevande("Acqua", 1.5);
         Bevande pepsi = new Bevande("Pepsi", 3.5);

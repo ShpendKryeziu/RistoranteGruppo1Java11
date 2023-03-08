@@ -1,20 +1,9 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("|_-'-_| Menù di Carne |_-'-_|");
-        Bevande acqua = new Bevande("Acqua", 1.5);
-        Bevande pepsi = new Bevande("Pepsi", 3.5);
-        Bevande leffe = new Bevande("Leffe 0.4", 5.5);
-        Bevande bonator = new Bevande("Bonator 0.66", 6.5);
-        Bevande raboso = new Bevande("Raboso", 3.0);
-        Bevande cabernet = new Bevande("Cabernet 2017", 2.5);
-        Bevande merlot = new Bevande("Merlot 2018", 3.5);
-        Bevande moscato = new Bevande("Moscato 2021", 2.5);
-        Bevande pinotGrigio = new Bevande("Pinot Grigio", 2.0);
-        Bevande rượuThuốc = new Bevande("Rượu thuốc", 5.5);
-        Bevande jägermeister = new Bevande("Jägermeister", 4.0);
-        Bevande baileys = new Bevande("Baileys", 3.5);
-        Bevande caffe = new Bevande("Caffè", 1.5);
-        System.out.println("Le bevande sono: " + Bevande.getTutteLeBevande());
 
         //DESSERT
         Dessert sangueDiCervoCaramellato = new Dessert("Sangue di Cervo caramellato", 4.00);
@@ -23,7 +12,6 @@ public class Main {
         Dessert cervellaDOrsoAlMirtillo = new Dessert("Cervella d'Orso al mirtillo",13.00);
         Dessert cremaCatalanaSuTeschioDiTasso = new Dessert("Crema Catalana su teschio di Tasso",8.00);
         Dessert zuccheroFilatoSuPeroneDiPuma = new Dessert("Zucchero filato su perone di Puma",14.00);
-        System.out.println("Le bevande sono : " + Dessert.getTuttiIDessert());
 
         //PRIMI
         Primi pappardelleAlRaguDiCinghiale = new Primi("Pappardelle al ragù di Cinghiale",6.5);
@@ -34,6 +22,5 @@ public class Main {
         Primi canederliAllaTirolese = new Primi("Canederli alla tirolese",9.50);
         Primi tortelliniInBrodoDiCappone = new Primi("Tortellini in brodo di Cappone",12.00);
         Primi ciorbaDiCapraTransilvanaAllaSgarbi = new Primi("Ciorba di Capra transilvana alla Sgarbi",10.00);
-        System.out.println("I primi sono : " + Primi.getTuttiIPrimi());
     }
 }

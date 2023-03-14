@@ -37,6 +37,16 @@ public class Menu {
 
     // SECONDI
 
+    Secondi cervelloFrittoDiCapraMontana = new Secondi("Cervello fritto di Capra montana", 12.50);
+    Secondi fegatelliDiAironeGrigioDeiBalcani = new Secondi("Fegatelli di Airone grigio dei Balcani", 11.50);
+    Secondi piottinoDiCinghialeNonSelvaticoAllaVodka = new Secondi("Piottino di Cinghiale non selvatico alla vodka", 9.50);
+    Secondi linguaDiYakBrasata = new Secondi("Lingua di Yak brasata", 16.80);
+    Secondi budiniDiSangueDiMaialeAllevatoAlloStatoBrado = new Secondi("Budini di sangue di Maiale allevato allo stato brado", 18.00);
+    private List<Secondi> secondiList = new ArrayList<>(Arrays.asList(cervelloFrittoDiCapraMontana,fegatelliDiAironeGrigioDeiBalcani,piottinoDiCinghialeNonSelvaticoAllaVodka,linguaDiYakBrasata,budiniDiSangueDiMaialeAllevatoAlloStatoBrado));
+    public List<Secondi> getSecondiList(){return secondiList;}
+    private void addSecondo (Secondi secondo){secondiList.add(secondo);}
+    private void removeSecondo(Secondi secondo){secondiList.remove(secondo);}
+
 
     // DESSERT
     Dessert sangueDiCervoCaramellato = new Dessert("Sangue di Cervo caramellato", 4.00);
@@ -67,6 +77,14 @@ public class Menu {
         }
         return somma / primiList.size();
     }
+    public double mediaCostoSecondi() {
+        double somma = 0;
+        for(Secondi item : secondiList){
+            somma += item.getPriceSecondo();
+        }
+        return somma / secondiList.size();
+    }
+
     public double mediaCostoDessert() {
         double somma = 0;
         for (Dessert item : dessertList) {
@@ -77,6 +95,6 @@ public class Menu {
 
     // MEDIA FINALE
     public double prezzoMedio() {
-        return mediaCostoBevande()+mediaCostoPrimi()+mediaCostoDessert(); // Qua sommiamo le altre medie
+        return mediaCostoBevande()+mediaCostoPrimi()+mediaCostoSecondi()+mediaCostoDessert(); // Qua sommiamo le altre medie
     }
 }

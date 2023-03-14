@@ -10,5 +10,8 @@ public class Main {
         menuDiCarne.prezzoMedio();
 
         System.out.println(menuDiCarne.getBevandeList());
+        System.out.println(menuDiCarne.getPrimiList());
+        System.out.println(menuDiCarne.getSecondiList());
+        System.out.println(menuDiCarne.getDessertList());
     }
 }

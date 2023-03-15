@@ -1,45 +1,49 @@
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.Collection;
 import java.util.List;
 public class Menu {
 
     private List<Portate> portate = new ArrayList<>();
-
-
-    // MEDIE
-    // Ognuno fa la media della propria lista, il metodo è uguale, basta usare la propia lista e il proprio .getPrice()
-    public double mediaCostoBevande() {
-        double somma = 0;
-        for (Bevande item : bevandeList) {
-            somma += item.getPrice();
+    public List<Portate> getPortate() { return portate; }
+    public void addPortata (Portate portata) { getPortate().add(portata); }
+    public void removePortata (Portate portata) { getPortate().remove((portata)); }
+    public void addPortate (Collection<Portate> portate) { getPortate().addAll(portate); }
+    public List<Portate> getBevande() {
+        List<Portate> bevande = new ArrayList<>();
+        for (Portate bibita : getPortate()) {
+            if (bibita instanceof Bevande) { bevande.add(bibita); }
         }
-        return somma / bevandeList.size();
+        return bevande;
     }
-    public double mediaCostoPrimi() {
-        double somma = 0;
-        for (Primi item : primiList) {
-            somma += item.getPricePrimo();
+    public List<Portate> getPrimi() {
+        List<Portate> primi = new ArrayList<>();
+        for (Portate primo : getPortate()) {
+            if (primo instanceof Bevande) { primi.add(primo); }
         }
-        return somma / primiList.size();
+        return primi;
     }
-    public double mediaCostoSecondi() {
-        double somma = 0;
-        for(Secondi item : secondiList){
-            somma += item.getPriceSecondo();
+    public List<Portate> getSecondi() {
+        List<Portate> secondi = new ArrayList<>();
+        for (Portate secondo : getPortate()) {
+            if (secondo instanceof Bevande) { secondi.add(secondo); }
         }
-        return somma / secondiList.size();
+        return secondi;
     }
-
-    public double mediaCostoDessert() {
-        double somma = 0;
-        for (Dessert item : dessertList) {
-           somma += item.getPrice();
+    public List<Portate> getDessert() {
+        List<Portate> desserts = new ArrayList<>();
+        for (Portate dessert : getPortate()) {
+            if (dessert instanceof Bevande) { desserts.add(dessert); }
         }
-        return somma / dessertList.size();
+        return desserts;
     }
-
-    // MEDIA FINALE
-    public double prezzoMedio() {
-        return mediaCostoBevande()+mediaCostoPrimi()+mediaCostoSecondi()+mediaCostoDessert(); // Qua sommiamo le altre medie
+    // TODO metodo per le medie
+    // TODO metodi per i menù vegano e di pesce
+    // TODO metodo stampa menù completo
+    public double getMedia() {
+        double sum = 0;
+        for (Portate piatto : getPortate()) {
+            sum += piatto.getPrice();
+        }
+        return sum/getPortate().size();
     }
 }

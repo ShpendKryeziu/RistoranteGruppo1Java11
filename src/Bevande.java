@@ -22,6 +22,9 @@ public class Bevande {
     public void setPrice(double beveragePrice) {
         this.beveragePrice = beveragePrice;
     }
+
+    //TODO il metodo to string non serve a stampare le info di un oggetto ma serve a stampare
+    //la rappresentazione stringate dell'oggetto nell'area di memoria, oggetto@23344
     @Override
     public String toString() {
         return beverageName + " - €" + beveragePrice;

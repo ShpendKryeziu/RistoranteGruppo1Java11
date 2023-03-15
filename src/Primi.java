@@ -1,7 +1,7 @@
 import java.util.Set;
 import java.util.HashSet;
 
-public class Primi {
+public class Primi extends Portate{
     private String namePrimo;
     private double pricePrimo;
 
@@ -23,6 +23,7 @@ public class Primi {
     }
     @Override
     public String toString() {
-        return namePrimo + " - €" + pricePrimo;
+
+        return super.toString() + namePrimo + " - €" + pricePrimo;
     }
 }

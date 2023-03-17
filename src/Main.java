@@ -30,7 +30,6 @@ public class Main {
         Bevande jagermeister = new Bevande("Jägermeister", 4.0, 0.02);
         Bevande baileys = new Bevande("Baileys", 3.5, 0.05);
 
-
         // PRIMI
         Primi pappardelleAlRaguDiCinghiale = new Primi("Pappardelle al ragù di Cinghiale",6.50, Tipologia.CARNE);
         Primi gnocchettiAlRisoNeroConCarpaccioDiVitelloCrudoEPeperoni = new Primi("Gnocchetti al riso nero con carpaccio di Vitello crudo e peperoni",7.50, Tipologia.CARNE);
@@ -41,14 +40,12 @@ public class Main {
         Primi tortelliniInBrodoDiCappone = new Primi("Tortellini in brodo di Cappone",12.00, Tipologia.CARNE);
         Primi ciorbaDiCapraTransilvanaAllaSgarbi = new Primi("Ciorba di Capra transilvana alla Sgarbi",10.00, Tipologia.CARNE);
 
-
         // SECONDI
         Secondi cervelloFrittoDiCapraMontana = new Secondi("Cervello fritto di Capra montana", 12.50, Tipologia.CARNE);
         Secondi fegatelliDiAironeGrigioDeiBalcani = new Secondi("Fegatelli di Airone grigio dei Balcani", 11.50, Tipologia.CARNE);
         Secondi piottinoDiCinghialeNonSelvaticoAllaVodka = new Secondi("Piottino di Cinghiale non selvatico alla vodka", 9.50, Tipologia.CARNE);
         Secondi linguaDiYakBrasata = new Secondi("Lingua di Yak brasata", 16.80, Tipologia.CARNE);
         Secondi budiniDiSangueDiMaialeAllevatoAlloStatoBrado = new Secondi("Budini di sangue di Maiale allevato allo stato brado", 18.00, Tipologia.CARNE);
-
 
         // DESSERT
         Dessert sangueDiCervoCaramellato = new Dessert("Sangue di Cervo caramellato", 4.00, 20, Tipologia.CARNE);
@@ -58,17 +55,13 @@ public class Main {
         Dessert cremaCatalanaSuTeschioDiTasso = new Dessert("Crema Catalana su teschio di Tasso",8.00, 70, Tipologia.CARNE);
         Dessert zuccheroFilatoSuPeroneDiPuma = new Dessert("Zucchero filato su perone di Puma",14.00, 99, Tipologia.CARNE);
 
-
-        System.out.println("|_-'-_| Ristorante Balkan Delish |_-'-_|");
-        System.out.println("Chef: Burim Dulgheru");
-        System.out.println("Cucina di carne");
-        Menu menuCompleto = new Menu();
+        // NOSTRO MENU
+        Menu menuCompleto = new Menu("Balkan Delish", "Burim Dulgheru", "Cucina di Carne");
         menuCompleto.addPortate(Arrays.asList(acqua,pepsi,leffe,bonator,raboso,cabernet,merlot,moscato,pinot,ruou,jagermeister,baileys));
         menuCompleto.addPortate(Arrays.asList(sangueDiCervoCaramellato,semifreddoDiOcchiDiLince,budelloDiCaprioloAlCioccolato,cervellaDOrsoAlMirtillo,cremaCatalanaSuTeschioDiTasso,zuccheroFilatoSuPeroneDiPuma));
         menuCompleto.addPortate(Arrays.asList(pappardelleAlRaguDiCinghiale,gnocchettiAlRisoNeroConCarpaccioDiVitelloCrudoEPeperoni, moussaka, ravioliDiPastaFrescaConRipienoDiVitelloCaprinoEMarsala,fagioliConCostineAffumicate,canederliAllaTirolese,tortelliniInBrodoDiCappone,ciorbaDiCapraTransilvanaAllaSgarbi));
         menuCompleto.addPortate(Arrays.asList(cervelloFrittoDiCapraMontana,fegatelliDiAironeGrigioDeiBalcani,piottinoDiCinghialeNonSelvaticoAllaVodka,linguaDiYakBrasata,budiniDiSangueDiMaialeAllevatoAlloStatoBrado));
 
-        //TODO tutte le varie portate saranno aggiunte a un unica lista che poi avrà il suo metodo di stampa in menù
         menuCompleto.printMenu();
         System.out.println(ANSI_RED_FONT + menuCompleto.getMedia() + ANSI_RESET);
     }

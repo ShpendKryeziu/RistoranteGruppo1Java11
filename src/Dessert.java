@@ -9,7 +9,7 @@ public class Dessert extends Portate {
             System.out.println("ERRORE: Glycemic Index value must be between 0 and 100");
         } else {this.highGlycemicIndex = highGlycemicIndex;}}
 
-    public Dessert(String name, double price, int isHighGlycemicIndex, Tipologia tipologia) {
+    public Dessert(String name, double price, int highGlycemicIndex, Tipologia tipologia) {
         super(name, price, tipologia);
         setHighGlycemicIndex(highGlycemicIndex);
     }

@@ -1,7 +1,4 @@
-import java.util.HashSet;
-import java.util.Set;
-
-public class Dessert extends Portate {
+public class Dessert extends Portata {
     private int highGlycemicIndex;
 
     //TODO cleaning code : prima i field, costruttore, getter e setter, metodi in overrride e poi gli altri metodi

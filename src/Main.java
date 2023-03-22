@@ -1,6 +1,4 @@
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 public class Main {
     public static String emoji_fire = "\uD83D\uDD25";
@@ -21,18 +19,18 @@ public class Main {
     public static void main(String[] args) {
 
         // BEVANDE
-        Bevande acqua = new Bevande("Acqua", 1.5, 0.75);
-        Bevande pepsi = new Bevande("Pepsi", 3.5, 0.33);
-        Bevande leffe = new Bevande("Leffe 0.4", 5.5, 0.4);
-        Bevande bonator = new Bevande("Bonator 0.66", 6.5, 0.66);
-        Bevande raboso = new Bevande("Raboso", 3.0, 0.15);
-        Bevande cabernet = new Bevande("Cabernet 2017", 2.5, 0.15);
-        Bevande merlot = new Bevande("Merlot 2018", 3.5, 0.15);
-        Bevande moscato = new Bevande("Moscato 2021", 2.5, 0.15);
-        Bevande pinot = new Bevande("Pinot Grigio", 2.0, 0.15);
-        Bevande ruou = new Bevande("Rượu thuốc", 5.5, 0.02);
-        Bevande jagermeister = new Bevande("Jägermeister", 4.0, 0.02);
-        Bevande baileys = new Bevande("Baileys", 3.5, 0.05);
+        Bevanda acqua = new Bevanda("Acqua", 1.5, 0.75);
+        Bevanda pepsi = new Bevanda("Pepsi", 3.5, 0.33);
+        Bevanda leffe = new Bevanda("Leffe 0.4", 5.5, 0.4);
+        Bevanda bonator = new Bevanda("Bonator 0.66", 6.5, 0.66);
+        Bevanda raboso = new Bevanda("Raboso", 3.0, 0.15);
+        Bevanda cabernet = new Bevanda("Cabernet 2017", 2.5, 0.15);
+        Bevanda merlot = new Bevanda("Merlot 2018", 3.5, 0.15);
+        Bevanda moscato = new Bevanda("Moscato 2021", 2.5, 0.15);
+        Bevanda pinot = new Bevanda("Pinot Grigio", 2.0, 0.15);
+        Bevanda ruou = new Bevanda("Rượu thuốc", 5.5, 0.02);
+        Bevanda jagermeister = new Bevanda("Jägermeister", 4.0, 0.02);
+        Bevanda baileys = new Bevanda("Baileys", 3.5, 0.05);
 
         // PRIMI
         Primi pappardelleAlRaguDiCinghiale = new Primi("Pappardelle al ragù di Cinghiale",6.50, Tipologia.CARNE);

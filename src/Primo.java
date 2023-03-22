@@ -1,6 +1,6 @@
-public class Primi extends Portata {
+public class Primo extends Portata {
 
-    public Primi(String name, double price, Tipologia tipologia) {
+    public Primo(String name, double price, Tipologia tipologia) {
         super(name, price, tipologia);
     }
     @Override

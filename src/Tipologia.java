@@ -1,1 +1,1 @@
-public enum Tipologia {CARNE, VEGANO, PESCE}
+public enum Tipologia {CARNE, VEGANO, PESCE, BEVANDA}

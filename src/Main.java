@@ -33,21 +33,21 @@ public class Main {
         Bevanda baileys = new Bevanda("Baileys", 3.5, 0.05);
 
         // PRIMI
-        Primi pappardelleAlRaguDiCinghiale = new Primi("Pappardelle al ragù di Cinghiale",6.50, Tipologia.CARNE);
-        Primi gnocchettiAlRisoNeroConCarpaccioDiVitelloCrudoEPeperoni = new Primi("Gnocchetti al riso nero con carpaccio di Vitello crudo e peperoni",7.50, Tipologia.CARNE);
-        Primi moussaka = new Primi("Moussaka",4.50, Tipologia.CARNE);
-        Primi ravioliDiPastaFrescaConRipienoDiVitelloCaprinoEMarsala = new Primi("Ravioli di pasta fresca con ripieno di Vitello, caprino e marsala",11.00, Tipologia.CARNE);
-        Primi fagioliConCostineAffumicate = new Primi("Fagioli con costine affumicate",7.50, Tipologia.CARNE);
-        Primi canederliAllaTirolese = new Primi("Canederli alla tirolese",9.50, Tipologia.CARNE);
-        Primi tortelliniInBrodoDiCappone = new Primi("Tortellini in brodo di Cappone",12.00, Tipologia.CARNE);
-        Primi ciorbaDiCapraTransilvanaAllaSgarbi = new Primi("Ciorba di Capra transilvana alla Sgarbi",10.00, Tipologia.CARNE);
+        Primo pappardelleAlRaguDiCinghiale = new Primo("Pappardelle al ragù di Cinghiale",6.50, Tipologia.CARNE);
+        Primo gnocchettiAlRisoNeroConCarpaccioDiVitelloCrudoEPeperoni = new Primo("Gnocchetti al riso nero con carpaccio di Vitello crudo e peperoni",7.50, Tipologia.CARNE);
+        Primo moussaka = new Primo("Moussaka",4.50, Tipologia.CARNE);
+        Primo ravioliDiPastaFrescaConRipienoDiVitelloCaprinoEMarsala = new Primo("Ravioli di pasta fresca con ripieno di Vitello, caprino e marsala",11.00, Tipologia.CARNE);
+        Primo fagioliConCostineAffumicate = new Primo("Fagioli con costine affumicate",7.50, Tipologia.CARNE);
+        Primo canederliAllaTirolese = new Primo("Canederli alla tirolese",9.50, Tipologia.CARNE);
+        Primo tortelliniInBrodoDiCappone = new Primo("Tortellini in brodo di Cappone",12.00, Tipologia.CARNE);
+        Primo ciorbaDiCapraTransilvanaAllaSgarbi = new Primo("Ciorba di Capra transilvana alla Sgarbi",10.00, Tipologia.CARNE);
 
         // SECONDI
-        Secondi cervelloFrittoDiCapraMontana = new Secondi("Cervello fritto di Capra montana", 12.50, Tipologia.CARNE);
-        Secondi fegatelliDiAironeGrigioDeiBalcani = new Secondi("Fegatelli di Airone grigio dei Balcani", 11.50, Tipologia.CARNE);
-        Secondi piottinoDiCinghialeNonSelvaticoAllaVodka = new Secondi("Piottino di Cinghiale non selvatico alla vodka", 9.50, Tipologia.CARNE);
-        Secondi linguaDiYakBrasata = new Secondi("Lingua di Yak brasata", 16.80, Tipologia.CARNE);
-        Secondi budiniDiSangueDiMaialeAllevatoAlloStatoBrado = new Secondi("Budini di sangue di Maiale allevato allo stato brado", 18.00, Tipologia.CARNE);
+        Secondo cervelloFrittoDiCapraMontana = new Secondo("Cervello fritto di Capra montana", 12.50, Tipologia.CARNE);
+        Secondo fegatelliDiAironeGrigioDeiBalcani = new Secondo("Fegatelli di Airone grigio dei Balcani", 11.50, Tipologia.CARNE);
+        Secondo piottinoDiCinghialeNonSelvaticoAllaVodka = new Secondo("Piottino di Cinghiale non selvatico alla vodka", 9.50, Tipologia.CARNE);
+        Secondo linguaDiYakBrasata = new Secondo("Lingua di Yak brasata", 16.80, Tipologia.CARNE);
+        Secondo budiniDiSangueDiMaialeAllevatoAlloStatoBrado = new Secondo("Budini di sangue di Maiale allevato allo stato brado", 18.00, Tipologia.CARNE);
 
         // DESSERT
         Dessert sangueDiCervoCaramellato = new Dessert("Sangue di Cervo caramellato", 4.00, 20, Tipologia.CARNE);

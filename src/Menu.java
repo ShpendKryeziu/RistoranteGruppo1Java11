@@ -28,13 +28,13 @@ public class Menu {
     public List<Portata> getPrimi() {
         List<Portata> primi = new ArrayList<>();
         for (Portata primo : getPortate()) {
-            if (primo instanceof Primi) { primi.add(primo); }
+            if (primo instanceof Primo) { primi.add(primo); }
         } return primi; }
 
     public List<Portata> getSecondi() {
         List<Portata> secondi = new ArrayList<>();
         for (Portata secondo : getPortate()) {
-            if (secondo instanceof Secondi) { secondi.add(secondo); }
+            if (secondo instanceof Secondo) { secondi.add(secondo); }
         } return secondi; }
 
     public List<Portata> getDessert() {

@@ -56,7 +56,7 @@ public class Menu {
     }
 
     public void printMenu(){
-        System.out.println("|_-'-_| " + getRestaurantName() + " |_-'-_|\n");
+        System.out.println(Main.ANSI_RED_BACKGROUND +Main.emoji_fire+Main.ANSI_BOLD+ Main.ANSI_BLACK +  getRestaurantName() +Main.emoji_fire+ Main.ANSI_RESET +"\n");
         System.out.println("Chef: " + getChefName() + "\n");
         System.out.println(getDescription() + "\n");
         System.out.println("\n PRIMI \n");
@@ -66,7 +66,7 @@ public class Menu {
         System.out.println("\n DESSERT \n");
         for (Portate dessert : getDessert()){dessert.printInfo();}
         System.out.println("\n BEVANDE \n");
-        for (Portate bevande : getDessert()){bevande.printInfo();}
+        for (Portate bevande : getBevande()){bevande.printInfo();}
         System.out.println("\n BUON APPETITO!!!");
         }
 

@@ -3,6 +3,9 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Main {
+    public static String emoji_fire = "\uD83D\uDD25";
+    public static final String ANSI_BOLD = "\u001B[1m";
+    public static final String ANSI_BLACK = "\u001B[30m";
     public static final String ANSI_BLACK_BACKGROUND = "\u001B[40m";
     public static final String ANSI_RED_BACKGROUND = "\u001B[41m";
     public static final String ANSI_GREEN_BACKGROUND = "\u001B[42m";
@@ -11,6 +14,7 @@ public class Main {
     public static final String ANSI_PURPLE_BACKGROUND = "\u001B[45m";
     public static final String ANSI_CYAN_BACKGROUND = "\u001B[46m";
     public static final String ANSI_WHITE_BACKGROUND = "\u001B[47m";
+    public static final String ANSI_BRIGHT_WHITE = "\u001B[97m";
     public static final String ANSI_RED_FONT = "\u001B[31m";
     public static final String ANSI_RESET = "\u001B[0m";
 

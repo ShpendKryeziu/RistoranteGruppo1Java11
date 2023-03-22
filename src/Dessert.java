@@ -6,7 +6,7 @@ public class Dessert extends Portate {
     public int getHighGlycemicIndex() {return highGlycemicIndex;}
     public void setHighGlycemicIndex(int highGlycemicIndex) {
         if (highGlycemicIndex>100 || highGlycemicIndex<0) {
-            System.out.println("ERRORE: Glycemic Index value must be between 0 and 100");
+            throw new IllegalArgumentException("ERRORE: Glycemic Index value must be between 0 and 100");
         } else {this.highGlycemicIndex = highGlycemicIndex;}}
 
     public Dessert(String name, double price, int highGlycemicIndex, Tipologia tipologia) {
@@ -16,6 +16,6 @@ public class Dessert extends Portate {
 
     @Override
     public void printInfo() {
-        System.out.println(getName() + " - €" + getPrice() + ". Glycemic Index = " + getHighGlycemicIndex());
+        System.out.println(getName() + " --- €" + getPrice() + ". Glycemic Index = " + getHighGlycemicIndex());
     }
 }

@@ -5,17 +5,27 @@ public class Menu {
     private String restaurantName;
     private String chefName;
     private String description;
-    public Menu (String name, String chef, String description) {
+    private List<Portate> portate;
+
+    public Menu (String name, String chef, String description, List<Portate> portate) {
         setRestaurantName(name);
         setChefName(chef);
         setDescription(description);
+        //TODO riguardare per capire il tutto, parlatene e prendete una decisione
+        this.portate = portate;
     }
-
-    private List<Portate> portate = new ArrayList<>();
     public List<Portate> getPortate() { return portate; }
     public void addPortata (Portate portata) { getPortate().add(portata); }
     public void removePortata (Portate portata) { getPortate().remove((portata)); }
-    public void addPortate (Collection<Portate> portate) { getPortate().addAll(portate); }
+
+    //TODO cancellare
+    public void addPortate (Collection<Portate> portate) {
+        portate.addAll(portate);
+    }
+
+    //TODO ma cosa vi importa di fare un metodo per ogni tipo quando vuoi inserite il menù in modo sequenziale
+    //perchè non facciamo un meotdo unico visto che sono tutti uguali, perchè non usiamo una sola lista?
+    //perchè il getter ha una logica quando deve solo tornare il valore?
     public List<Portate> getBevande() {
         List<Portate> bevande = new ArrayList<>();
         for (Portate bibita : getPortate()) {

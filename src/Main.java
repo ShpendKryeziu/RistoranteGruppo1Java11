@@ -65,6 +65,5 @@ public class Main {
         menuCompleto.addPortate(Arrays.asList(cervelloFrittoDiCapraMontana,fegatelliDiAironeGrigioDeiBalcani,piottinoDiCinghialeNonSelvaticoAllaVodka,linguaDiYakBrasata,budiniDiSangueDiMaialeAllevatoAlloStatoBrado));
 
         menuCompleto.printMenu();
-        System.out.println(ANSI_RED_FONT + menuCompleto.getMedia() + ANSI_RESET);
     }
 }

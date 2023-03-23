@@ -37,6 +37,7 @@ public class Menu {
     public List<Portata> getPortataByCategory(Class category) {
         List<Portata> categoryList = new ArrayList<>();
         if (category.equals(Bevanda.class)) {
+            for (Portata portata : getPortate()) {if (portata instanceof Bevanda) {categoryList.add(portata);}}
         } else if (category.equals(Primo.class)) {
             for (Portata portata : getPortate()) {if (portata instanceof Primo) {categoryList.add(portata);}}
         } else if (category.equals(Secondo.class)) {

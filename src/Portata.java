@@ -7,7 +7,7 @@ public abstract class Portata {
     private Tipologia tipologia;
 
     /**
-     *
+     *Imposta una portata che abbia un nome, un prezzo e una tipologia dietologica.
      * @param name
      * @param price
      * @param tipologia
@@ -27,6 +27,7 @@ public abstract class Portata {
     }
     public void setTipologia(Tipologia tipologia) { this.tipologia = tipologia; }
     /**
+     * Stampa la portata in console come fosse in un menù.
      * @return la descrizione della portata
      */
     public void printInfo() { System.out.println(getName() + " --- €" + getPrice()); }

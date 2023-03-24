@@ -14,17 +14,45 @@ public class Menu {
         this.description = description;
     }
 
-    public String getRestaurantName() { return restaurantName; }
-    public void setRestaurantName(String restaurantName) { this.restaurantName = restaurantName; }
-    public String getChefName() { return chefName; }
-    public void setChefName(String chefName) { this.chefName = chefName; }
-    public String getDescription() { return description; }
-    public void setDescription(String description) { this.description = description; }
+    public String getRestaurantName() {
+        return restaurantName;
+    }
 
-    public List<Portata> getPortate() { return listaPortata; }
-    public void addPortata(Portata portata) { listaPortata.add(portata); }
-    public void removePortata(Portata portata) { listaPortata.remove((portata)); }
-    public void addPortate(Collection<Portata> portata) { listaPortata.addAll(portata); }
+    public void setRestaurantName(String restaurantName) {
+        this.restaurantName = restaurantName;
+    }
+
+    public String getChefName() {
+        return chefName;
+    }
+
+    public void setChefName(String chefName) {
+        this.chefName = chefName;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public List<Portata> getPortate() {
+        return listaPortata;
+    }
+
+    public void addPortata(Portata portata) {
+        listaPortata.add(portata);
+    }
+
+    public void removePortata(Portata portata) {
+        listaPortata.remove((portata));
+    }
+
+    public void addPortate(Collection<Portata> portata) {
+        listaPortata.addAll(portata);
+    }
 
     public List<Portata> getPortataByCategory(Class category) {
         List<Portata> categoryList = new ArrayList<>();
@@ -55,8 +83,11 @@ public class Menu {
         }
         return categoryList;
     }
+
     // TODO metodi per i menù vegano e di pesce
-        public void printMenu() {
+
+
+    public void printMenu() {
         System.out.println(Main.ANSI_RED_BACKGROUND + Main.emoji_fire + Main.ANSI_BOLD + Main.ANSI_BLACK + getRestaurantName() + Main.emoji_fire + Main.ANSI_RESET + "\n");
         System.out.println("Chef: " + getChefName() + "\n");
         System.out.println(getDescription() + "\n");
@@ -64,6 +95,7 @@ public class Menu {
         for (Portata primo : getPortataByCategory(Primo.class)) {
             primo.printInfo();
         }
+
         System.out.println("\n SECONDI \n");
         for (Portata secondo : getPortataByCategory(Secondo.class)) {
             secondo.printInfo();
@@ -78,4 +110,7 @@ public class Menu {
         }
         System.out.println("\n BUON APPETITO!!!");
     }
+
+
 }
+

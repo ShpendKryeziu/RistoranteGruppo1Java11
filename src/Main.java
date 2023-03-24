@@ -4,6 +4,8 @@ public class Main {
     public static String emoji_fire = "\uD83D\uDD25";
     public static final String ANSI_BOLD = "\u001B[1m";
     public static final String ANSI_BLACK = "\u001B[30m";
+    public static final String ANSI_ITALIC = "\u001B[3m";
+    public static final String ANSI_GREY = "\u001B[90m";
     public static final String ANSI_BLACK_BACKGROUND = "\u001B[40m";
     public static final String ANSI_RED_BACKGROUND = "\u001B[41m";
     public static final String ANSI_GREEN_BACKGROUND = "\u001B[42m";
@@ -32,15 +34,26 @@ public class Main {
         Bevanda jagermeister = new Bevanda("Jägermeister", 4.0, 0.02);
         Bevanda baileys = new Bevanda("Baileys", 3.5, 0.05);
 
+
+        // Dichiaro ed inizializzo allergeni
+        String[] papardelleAllergens = {"glutine", "latte"};
+        String[] gnocchettiAllergens = {"glutine", "latte", "sedano", "aglio"};
+        String[] moussakaAllergens = {"latte", "uova", "grano/glutine", "cipolla", "aglio"};
+        String[] ravioliAllergens = {"grano/glutine","latte","uova", "aglio"};
+        String[] fagioliAllergens = {"sedano", "cipolla", "aglio"};
+        String[] canederliAllergens = {"grano/glutine","latte","uova","cipolla", "aglio"};
+        String[] tortelliniAllergens = {"grano/glutine","uova", "aglio","sedano", "carote", "cipolla"};
+        String[] ciorbaAllergens = {"frumento/glutine", "carote","uova", "aglio","cipolla"};
+
         // PRIMI
-        Primo pappardelleAlRaguDiCinghiale = new Primo("Pappardelle al ragù di Cinghiale",6.50, Tipologia.CARNE);
-        Primo gnocchettiAlRisoNeroConCarpaccioDiVitelloCrudoEPeperoni = new Primo("Gnocchetti al riso nero con carpaccio di Vitello crudo e peperoni",7.50, Tipologia.CARNE);
-        Primo moussaka = new Primo("Moussaka",4.50, Tipologia.CARNE);
-        Primo ravioliDiPastaFrescaConRipienoDiVitelloCaprinoEMarsala = new Primo("Ravioli di pasta fresca con ripieno di Vitello, caprino e marsala",11.00, Tipologia.CARNE);
-        Primo fagioliConCostineAffumicate = new Primo("Fagioli con costine affumicate",7.50, Tipologia.CARNE);
-        Primo canederliAllaTirolese = new Primo("Canederli alla tirolese",9.50, Tipologia.CARNE);
-        Primo tortelliniInBrodoDiCappone = new Primo("Tortellini in brodo di Cappone",12.00, Tipologia.CARNE);
-        Primo ciorbaDiCapraTransilvanaAllaSgarbi = new Primo("Ciorba di Capra transilvana alla Sgarbi",10.00, Tipologia.CARNE);
+        Primo pappardelleAlRaguDiCinghiale = new Primo("Pappardelle al ragù di Cinghiale",6.50, Tipologia.CARNE, papardelleAllergens );
+        Primo gnocchettiAlRisoNeroConCarpaccioDiVitelloCrudoEPeperoni = new Primo("Gnocchetti al riso nero con carpaccio di Vitello crudo e peperoni",7.50, Tipologia.CARNE, gnocchettiAllergens);
+        Primo moussaka = new Primo("Moussaka",4.50, Tipologia.CARNE, moussakaAllergens);
+        Primo ravioliDiPastaFrescaConRipienoDiVitelloCaprinoEMarsala = new Primo("Ravioli di pasta fresca con ripieno di Vitello, caprino e marsala",11.00, Tipologia.CARNE, ravioliAllergens);
+        Primo fagioliConCostineAffumicate = new Primo("Fagioli con costine affumicate",7.50, Tipologia.CARNE, fagioliAllergens);
+        Primo canederliAllaTirolese = new Primo("Canederli alla tirolese",9.50, Tipologia.CARNE, canederliAllergens);
+        Primo tortelliniInBrodoDiCappone = new Primo("Tortellini in brodo di Cappone",12.00, Tipologia.CARNE, tortelliniAllergens);
+        Primo ciorbaDiCapraTransilvana = new Primo("Ciorba di Capra transilvana alla Sgarbi",10.00, Tipologia.CARNE, ciorbaAllergens);
 
         // SECONDI
         Secondo cervelloFrittoDiCapraMontana = new Secondo("Cervello fritto di Capra montana", 12.50, Tipologia.CARNE);
@@ -61,7 +74,7 @@ public class Main {
         Menu menuCompleto = new Menu("Balkan Delish", "Burim Dulgheru", "Cucina di Carne");
         menuCompleto.addPortate(Arrays.asList(acqua,pepsi,leffe,bonator,raboso,cabernet,merlot,moscato,pinot,ruou,jagermeister,baileys));
         menuCompleto.addPortate(Arrays.asList(sangueDiCervoCaramellato,semifreddoDiOcchiDiLince,budelloDiCaprioloAlCioccolato,cervellaDOrsoAlMirtillo,cremaCatalanaSuTeschioDiTasso,zuccheroFilatoSuPeroneDiPuma));
-        menuCompleto.addPortate(Arrays.asList(pappardelleAlRaguDiCinghiale,gnocchettiAlRisoNeroConCarpaccioDiVitelloCrudoEPeperoni, moussaka, ravioliDiPastaFrescaConRipienoDiVitelloCaprinoEMarsala,fagioliConCostineAffumicate,canederliAllaTirolese,tortelliniInBrodoDiCappone,ciorbaDiCapraTransilvanaAllaSgarbi));
+        menuCompleto.addPortate(Arrays.asList(pappardelleAlRaguDiCinghiale,gnocchettiAlRisoNeroConCarpaccioDiVitelloCrudoEPeperoni, moussaka, ravioliDiPastaFrescaConRipienoDiVitelloCaprinoEMarsala,fagioliConCostineAffumicate,canederliAllaTirolese,tortelliniInBrodoDiCappone,ciorbaDiCapraTransilvana));
         menuCompleto.addPortate(Arrays.asList(cervelloFrittoDiCapraMontana,fegatelliDiAironeGrigioDeiBalcani,piottinoDiCinghialeNonSelvaticoAllaVodka,linguaDiYakBrasata,budiniDiSangueDiMaialeAllevatoAlloStatoBrado));
 
         menuCompleto.printMenu();

@@ -60,6 +60,7 @@ public class Menu {
                     for (Portata primo : getPortataByCategory(Primo.class)) {
                         primo.printInfo();
                     }
+
                     System.out.println("\n SECONDI \n");
                     for (Portata secondo : getPortataByCategory(Secondo.class)) {
                         secondo.printInfo();
@@ -93,4 +94,4 @@ public class Menu {
                 public void setDescription (String description){
                     this.description = description;
                 }
-            }
+    }

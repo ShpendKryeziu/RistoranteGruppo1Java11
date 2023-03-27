@@ -2,17 +2,26 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
+
 public class Menu {
     private String restaurantName;
     private String chefName;
     private String description;
     private List<Portata> listaPortata = new ArrayList<>();
 
+    /**
+     * Crea un oggetto Menu che ha come parametri il nome del ristorante e dello chef e il tipo di dieta
+     * @param name il nome del ristorante
+     * @param chef il nome dello chef
+     * @param description specifica la tipologia dietologica del menù
+     */
+
     public Menu(String name, String chef, String description) {
         this.restaurantName = name;
         this.chefName = chef;
         this.description = description;
     }
+    //Getters and Setters
 
     public String getRestaurantName() {
         return restaurantName;
@@ -54,6 +63,13 @@ public class Menu {
         listaPortata.addAll(portata);
     }
 
+    /***
+     * Ritrova una lista di piatti dal menu che appartengono a una determinata categoria
+     * @param category la categoria del piatto (primo/secondo/etc)
+     * @return tutti i piatti che appartenenti alla categoria specificata
+     */
+    
+
     public List<Portata> getPortataByCategory(Class category) {
         List<Portata> categoryList = new ArrayList<>();
         if (category.equals(Bevanda.class)) {
@@ -86,6 +102,9 @@ public class Menu {
 
     // TODO metodi per i menù vegano e di pesce
 
+    /***
+     * Stampa il menu con il nome del ristorante e dello chef e tutte le portate divise per categoria + un messaggio finale
+     */
 
     public void printMenu() {
         System.out.println(Main.ANSI_RED_BACKGROUND + Main.emoji_fire + Main.ANSI_BOLD + Main.ANSI_BLACK + getRestaurantName() + Main.emoji_fire + Main.ANSI_RESET + "\n");

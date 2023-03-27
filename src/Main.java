@@ -48,12 +48,12 @@ public class Main {
         // PRIMI
         Primo pappardelleAlRaguDiCinghiale = new Primo("Pappardelle al ragù di Cinghiale",6.50, Tipologia.CARNE, papardelleAllergens );
         Primo gnocchettiAlRisoNeroConCarpaccioDiVitelloCrudoEPeperoni = new Primo("Gnocchetti al riso nero con carpaccio di Vitello crudo e peperoni",7.50, Tipologia.CARNE, gnocchettiAllergens);
-        Primo moussaka = new Primo("Moussaka",4.50, Tipologia.CARNE, moussakaAllergens);
+        Primo moussaka = new Primo("Moussaka",6.50, Tipologia.CARNE, moussakaAllergens);
         Primo ravioliDiPastaFrescaConRipienoDiVitelloCaprinoEMarsala = new Primo("Ravioli di pasta fresca con ripieno di Vitello, caprino e marsala",11.00, Tipologia.CARNE, ravioliAllergens);
         Primo fagioliConCostineAffumicate = new Primo("Fagioli con costine affumicate",7.50, Tipologia.CARNE, fagioliAllergens);
         Primo canederliAllaTirolese = new Primo("Canederli alla tirolese",9.50, Tipologia.CARNE, canederliAllergens);
         Primo tortelliniInBrodoDiCappone = new Primo("Tortellini in brodo di Cappone",12.00, Tipologia.CARNE, tortelliniAllergens);
-        Primo ciorbaDiCapraTransilvana = new Primo("Ciorba di Capra transilvana alla Sgarbi",10.00, Tipologia.CARNE, ciorbaAllergens);
+        Primo ciorbaDiCapraTransilvana = new Primo("Ciorba di Capra transilvana",10.00, Tipologia.CARNE, ciorbaAllergens);
 
         // SECONDI
         Secondo cervelloFrittoDiCapraMontana = new Secondo("Cervello fritto di Capra montana", 12.50, Tipologia.CARNE);

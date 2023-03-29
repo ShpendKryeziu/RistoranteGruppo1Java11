@@ -4,6 +4,9 @@ import java.util.List;
 
 
 public class Menu {
+
+
+    //TODO manca la tipologia
     private String restaurantName;
     private String chefName;
     private String description;
@@ -69,7 +72,7 @@ public class Menu {
      * @return tutti i piatti che appartenenti alla categoria specificata
      */
     
-
+    //TODO se inseriamo il tipo portata possiamo automatizzare il tutto , pensiamoci!
     public List<Portata> getPortataByCategory(Class category) {
         List<Portata> categoryList = new ArrayList<>();
         if (category.equals(Bevanda.class)) {
@@ -111,6 +114,12 @@ public class Menu {
         System.out.println("Chef: " + getChefName() + "\n");
         System.out.println(getDescription() + "\n");
         System.out.println("\n PRIMI \n");
+
+        for (Portata portata: listaPortata) {
+            portata.printInfo();
+        }
+
+        /**
         for (Portata primo : getPortataByCategory(Primo.class)) {
             primo.printInfo();
         }
@@ -127,6 +136,7 @@ public class Menu {
         for (Portata bevande : getPortataByCategory(Bevanda.class)) {
             bevande.printInfo();
         }
+         **/
         System.out.println("\n BUON APPETITO!!!");
     }
 

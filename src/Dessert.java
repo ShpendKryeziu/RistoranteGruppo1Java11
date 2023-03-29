@@ -9,6 +9,8 @@ public class Dessert extends Portata {
      * @param glycemicIndex l'indice glicemico di Dessert: può essere tra 0 e 100.
      *                      Se <0 o >100, costituisce IllegalArgumentException con messaggio di errore.
      */
+
+    //TODO i costruttori devono essere puri, al momento lasciamo stare le validazioni
     public Dessert(String name, double price, int glycemicIndex, Tipologia tipologia) {
         super(name, price, tipologia);
         if (glycemicIndex < 0 || glycemicIndex > 100) {

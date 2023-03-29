@@ -8,8 +8,10 @@ public class Bevanda extends Portata {
      * @param price
      * @param capacity
      */
+
+    //TODO rifattorizzare
     public Bevanda(String name, double price, double capacity) {
-        super(name, price, Tipologia.BEVANDA);
+        super(name, price, TipoPortata.BEVANDE.);
         this.capacity = capacity;
     }
     public double getCapacity() { return capacity; }

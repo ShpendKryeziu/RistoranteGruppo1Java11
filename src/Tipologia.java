@@ -1,1 +1,5 @@
-public enum Tipologia {CARNE, VEGANO, PESCE, BEVANDA}
+public enum Tipologia {
+
+    //TODO sistamare
+    CARNE, VEGANO, PESCE
+}

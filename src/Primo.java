@@ -2,21 +2,25 @@ import java.util.Arrays;
 
 public class Primo extends Portata {
 
+
+    //TODO dobbiamo puntare a lavorare sempre con strutture ad ogetti ad alto livello: no int ma Integer no Array ma arraylist
     private String[] allergens;
 
     /**
      * Crea un nuovo oggetto di tipo primo
-     * @param name il nome del primo
-     * @param price il costo del primo
+     *
+     * @param name      il nome del primo
+     * @param price     il costo del primo
      * @param tipologia il tipo di dieta (di carne/vegano/pesce o bevanda)
      * @param allergens la presenza di allergeni
      */
-    public Primo(String name, double price, Tipologia tipologia,String[] allergens) {
+    public Primo(String name, double price, Tipologia tipologia, String[] allergens) {
         super(name, price, tipologia);
         this.allergens = allergens;
     }
+
     // Getters
-    public String[] getAllergens(){
+    public String[] getAllergens() {
         return allergens;
     }
 
@@ -32,12 +36,12 @@ public class Primo extends Portata {
      */
 
     @Override
-public void printInfo() {
-    System.out.print(getName() + " --- €" + getPrice() + "\n"+Main.ANSI_GREY +Main.ANSI_ITALIC + " allergeni = " + Main.ANSI_RESET);
-    for (String allergen : allergens) {
-        System.out.print(Main.ANSI_GREY+Main.ANSI_ITALIC + allergen + " "+ Main.ANSI_RESET);
+    public void printInfo() {
+        System.out.print(getName() + " --- €" + getPrice() + "\n" + Main.ANSI_GREY + Main.ANSI_ITALIC + " allergeni = " + Main.ANSI_RESET);
+        for (String allergen : allergens) {
+            System.out.print(Main.ANSI_GREY + Main.ANSI_ITALIC + allergen + " " + Main.ANSI_RESET);
+        }
+        System.out.println();
     }
-    System.out.println();
-}
 
 }

@@ -1,7 +1,5 @@
 public abstract class Portata {
 
-    //TODO le classi si chiamano sempre al singolare
-    //TODO inserire javadoc su tutte le classi
     private String name;
     private double price;
     private Tipologia tipologia;

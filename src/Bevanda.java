@@ -1,5 +1,6 @@
 public class Bevanda extends Portata {
-    private double capacity;
+    private Double capacity;
+    private Boolean alcoholic;
 
     /**
      * Istanzia un oggetto di tipo bevanda, bibita, drink, o liquore, con parametri il nome della bevanda, il suo prezzo,
@@ -7,15 +8,18 @@ public class Bevanda extends Portata {
      * @param name
      * @param price
      * @param capacity
+     * @param alcoholic
      */
 
-    //TODO rifattorizzare
-    public Bevanda(String name, double price, double capacity) {
-        super(name, price, TipoPortata.BEVANDE.);
+    public Bevanda(String name, Double price, Double capacity, Boolean alcoholic) {
+        super(name, price, null, TipoPortata.BEVANDA);
         this.capacity = capacity;
+        this.alcoholic = alcoholic;
     }
-    public double getCapacity() { return capacity; }
-    public void setCapacity(double capacity) { this.capacity = capacity; }
+    public Double getCapacity() { return capacity; }
+    public void setCapacity(Double capacity) { this.capacity = capacity; }
+    public Boolean getAlcoholic() { return alcoholic; }
+    public void setAlcoholic(Boolean alcoholic) { this.alcoholic = alcoholic; }
 
     /**
      * Stampa la descrizione della bevanda come nella classe padre, ma con aggiunta la quantità in Litri.

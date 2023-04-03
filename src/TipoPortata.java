@@ -1,7 +1,7 @@
 public enum TipoPortata {
 
     //TODO finire
-    BEVANDE("Bevande", "tipologia per la portata bevande"),
+    BEVANDA("Bevande", "tipologia per la portata bevande"),
     PRIMO("Primo", "tipologia per la portata primo"),
     SECONDO("Secondo", "tipologia per la portata secondo"),
     DESSERT("Dessert","tipologia per la portata dessert");

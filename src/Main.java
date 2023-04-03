@@ -21,18 +21,18 @@ public class Main {
     public static void main(String[] args) {
 
         // BEVANDE
-        Bevanda acqua = new Bevanda("Acqua", 1.5, 0.75);
-        Bevanda pepsi = new Bevanda("Pepsi", 3.5, 0.33);
-        Bevanda leffe = new Bevanda("Leffe 0.4", 5.5, 0.4);
-        Bevanda bonator = new Bevanda("Bonator 0.66", 6.5, 0.66);
-        Bevanda raboso = new Bevanda("Raboso", 3.0, 0.15);
-        Bevanda cabernet = new Bevanda("Cabernet 2017", 2.5, 0.15);
-        Bevanda merlot = new Bevanda("Merlot 2018", 3.5, 0.15);
-        Bevanda moscato = new Bevanda("Moscato 2021", 2.5, 0.15);
-        Bevanda pinot = new Bevanda("Pinot Grigio", 2.0, 0.15);
-        Bevanda ruou = new Bevanda("Rượu thuốc", 5.5, 0.02);
-        Bevanda jagermeister = new Bevanda("Jägermeister", 4.0, 0.02);
-        Bevanda baileys = new Bevanda("Baileys", 3.5, 0.05);
+        Bevanda acqua = new Bevanda("Acqua", 1.5, 0.75, false);
+        Bevanda pepsi = new Bevanda("Pepsi", 3.5, 0.33, false);
+        Bevanda leffe = new Bevanda("Leffe 0.4", 5.5, 0.4, true);
+        Bevanda bonator = new Bevanda("Bonator 0.66", 6.5, 0.66, true);
+        Bevanda raboso = new Bevanda("Raboso", 3.0, 0.15, true);
+        Bevanda cabernet = new Bevanda("Cabernet 2017", 2.5, 0.15, true);
+        Bevanda merlot = new Bevanda("Merlot 2018", 3.5, 0.15, true);
+        Bevanda moscato = new Bevanda("Moscato 2021", 2.5, 0.15, true);
+        Bevanda pinot = new Bevanda("Pinot Grigio", 2.0, 0.15, true);
+        Bevanda ruou = new Bevanda("Rượu thuốc", 5.5, 0.02, true);
+        Bevanda jagermeister = new Bevanda("Jägermeister", 4.0, 0.02, true);
+        Bevanda baileys = new Bevanda("Baileys", 3.5, 0.05, true);
 
 
         // Dichiaro ed inizializzo allergeni
@@ -71,7 +71,7 @@ public class Main {
         Dessert zuccheroFilatoSuPeroneDiPuma = new Dessert("Zucchero filato su perone di Puma",14.00, 99, Tipologia.CARNE);
 
         // NOSTRO MENU
-        Menu menuCompleto = new Menu("Balkan Delish", "Burim Dulgheru", "Cucina di Carne");
+        Menu menuCompleto = new Menu("Balkan Delish", "Burim Dulgheru", Tipologia.CARNE, "Cucina di Carne in Stile Balcanico");
         menuCompleto.addPortate(Arrays.asList(acqua,pepsi,leffe,bonator,raboso,cabernet,merlot,moscato,pinot,ruou,jagermeister,baileys));
         menuCompleto.addPortate(Arrays.asList(sangueDiCervoCaramellato,semifreddoDiOcchiDiLince,budelloDiCaprioloAlCioccolato,cervellaDOrsoAlMirtillo,cremaCatalanaSuTeschioDiTasso,zuccheroFilatoSuPeroneDiPuma));
         menuCompleto.addPortate(Arrays.asList(pappardelleAlRaguDiCinghiale,gnocchettiAlRisoNeroConCarpaccioDiVitelloCrudoEPeperoni, moussaka, ravioliDiPastaFrescaConRipienoDiVitelloCaprinoEMarsala,fagioliConCostineAffumicate,canederliAllaTirolese,tortelliniInBrodoDiCappone,ciorbaDiCapraTransilvana));

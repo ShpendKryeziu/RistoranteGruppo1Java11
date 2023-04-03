@@ -10,7 +10,7 @@ public class Dessert extends Portata {
      */
 
     public Dessert(String name, Double price, Integer glycemicIndex, Tipologia tipologia) {
-        super(name, price, tipologia);
+        super(name, price, tipologia, TipoPortata.DESSERT);
         this.glycemicIndex = glycemicIndex;
     }
 

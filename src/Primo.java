@@ -2,7 +2,6 @@ import java.util.Arrays;
 
 public class Primo extends Portata {
 
-
     //TODO dobbiamo puntare a lavorare sempre con strutture ad ogetti ad alto livello: no int ma Integer no Array ma arraylist
     private String[] allergens;
 
@@ -14,8 +13,8 @@ public class Primo extends Portata {
      * @param tipologia il tipo di dieta (di carne/vegano/pesce o bevanda)
      * @param allergens la presenza di allergeni
      */
-    public Primo(String name, double price, Tipologia tipologia, String[] allergens) {
-        super(name, price, tipologia);
+    public Primo(String name, Double price, Tipologia tipologia, String[] allergens) {
+        super(name, price, tipologia, TipoPortata.PRIMO);
         this.allergens = allergens;
     }
 

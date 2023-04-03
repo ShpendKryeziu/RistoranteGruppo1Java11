@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class Primo extends Portata {
 
     //TODO dobbiamo puntare a lavorare sempre con strutture ad ogetti ad alto livello: no int ma Integer no Array ma arraylist
-    private ArrayList<Allergens> allergens;
+    private ArrayList<String> allergens;
 
     /**
      * Crea un nuovo oggetto di tipo primo
@@ -13,18 +13,18 @@ public class Primo extends Portata {
      * @param tipologia il tipo di dieta (di carne/vegano/pesce o bevanda)
      * @param allergens la presenza di allergeni
      */
-    public Primo(String name, Double price, Tipologia tipologia, ArrayList<Allergens> allergens) {
+    public Primo(String name, Double price, Tipologia tipologia, ArrayList<String> allergens) {
         super(name, price, tipologia, TipoPortata.PRIMO);
         this.allergens = allergens;
     }
 
     // Getters
-    public ArrayList<Allergens> getAllergens() {
+    public ArrayList<String> getAllergens() {
         return allergens;
     }
 
     //Setters
-    public void setAllergens(ArrayList<Allergens> allergens) {
+    public void setAllergens(ArrayList<String> allergens) {
         this.allergens = allergens;
     }
 
@@ -37,7 +37,7 @@ public class Primo extends Portata {
     @Override
     public void printInfo() {
         System.out.print(getName() + " --- €" + getPrice() + "\n" + Main.ANSI_GREY + Main.ANSI_ITALIC + " allergeni = " + Main.ANSI_RESET);
-        for (Allergens allergen : allergens) {
+        for (String allergen : allergens) {
             System.out.print(Main.ANSI_GREY + Main.ANSI_ITALIC + allergen + " " + Main.ANSI_RESET);
         }
         System.out.println();

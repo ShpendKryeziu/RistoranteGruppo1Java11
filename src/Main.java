@@ -37,14 +37,14 @@ public class Main {
 
 
         // Dichiaro ed inizializzo allergeni
-        ArrayList<Allergens> papardelleAllergens = new ArrayList<>(Arrays.asList(Allergens.GLUTINE, Allergens.LATTOSIO));
-        ArrayList<Allergens> gnocchettiAllergens = new ArrayList<>(Arrays.asList(Allergens.GLUTINE, Allergens.LATTOSIO, Allergens.SEDANO, Allergens.AGLIO));
-        ArrayList<Allergens> moussakaAllergens = new ArrayList<>(Arrays.asList(Allergens.LATTOSIO,Allergens.UOVA,Allergens.GLUTINE, Allergens.CIPOLLA,Allergens.AGLIO));
-        ArrayList<Allergens> ravioliAllergens = new ArrayList<>(Arrays.asList(Allergens.GLUTINE, Allergens.LATTOSIO, Allergens.UOVA,Allergens.AGLIO));
-        ArrayList<Allergens> fagioliAllergens = new ArrayList<>(Arrays.asList(Allergens.SEDANO,Allergens.CIPOLLA, Allergens.AGLIO));
-        ArrayList<Allergens> canederliAllergens = new ArrayList<>(Arrays.asList(Allergens.GLUTINE,Allergens.LATTOSIO,Allergens.UOVA,Allergens.CIPOLLA,Allergens.AGLIO));
-        ArrayList<Allergens> tortelliniAllergens = new ArrayList<>(Arrays.asList(Allergens.GLUTINE,Allergens.UOVA,Allergens.AGLIO,Allergens.SEDANO,Allergens.CAROTE,Allergens.CIPOLLA));
-        ArrayList<Allergens> ciorbaAllergens = new ArrayList<>(Arrays.asList(Allergens.FRUMENTO,Allergens.GLUTINE,Allergens.CAROTE,Allergens.UOVA,Allergens.AGLIO,Allergens.CIPOLLA));
+        ArrayList<String> papardelleAllergens = new ArrayList<>(Arrays.asList(Allergens.GLUTINE.getName(), Allergens.LATTOSIO.getName()));
+        ArrayList<String> gnocchettiAllergens = new ArrayList<>(Arrays.asList(Allergens.GLUTINE.getName(), Allergens.LATTOSIO.getName(), Allergens.SEDANO.getName(), Allergens.AGLIO.getName()));
+        ArrayList<String> moussakaAllergens = new ArrayList<>(Arrays.asList(Allergens.LATTOSIO.getName(),Allergens.UOVA.getName(),Allergens.GLUTINE.getName(), Allergens.CIPOLLA.getName(),Allergens.AGLIO.getName()));
+        ArrayList<String> ravioliAllergens = new ArrayList<>(Arrays.asList(Allergens.GLUTINE.getName(), Allergens.LATTOSIO.getName(), Allergens.UOVA.getName(),Allergens.AGLIO.getName()));
+        ArrayList<String> fagioliAllergens = new ArrayList<>(Arrays.asList(Allergens.SEDANO.getName(),Allergens.CIPOLLA.getName(), Allergens.AGLIO.getName()));
+        ArrayList<String> canederliAllergens = new ArrayList<>(Arrays.asList(Allergens.GLUTINE.getName(),Allergens.LATTOSIO.getName(),Allergens.UOVA.getName(),Allergens.CIPOLLA.getName(),Allergens.AGLIO.getName()));
+        ArrayList<String> tortelliniAllergens = new ArrayList<>(Arrays.asList(Allergens.GLUTINE.getName(),Allergens.UOVA.getName(),Allergens.AGLIO.getName(),Allergens.SEDANO.getName(),Allergens.CAROTE.getName(),Allergens.CIPOLLA.getName()));
+        ArrayList<String> ciorbaAllergens = new ArrayList<>(Arrays.asList(Allergens.FRUMENTO.getName(),Allergens.GLUTINE.getName(),Allergens.CAROTE.getName(),Allergens.UOVA.getName(),Allergens.AGLIO.getName(),Allergens.CIPOLLA.getName()));
 
 
         // PRIMI

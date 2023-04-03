@@ -1,7 +1,7 @@
 public abstract class Portata {
 
     private String name;
-    private double price;
+    private Double price;
     private Tipologia tipologia;
 
     /**
@@ -11,15 +11,15 @@ public abstract class Portata {
      * @param tipologia
      */
 
-    public Portata(String name, double price, Tipologia tipologia) {
+    public Portata(String name, Double price, Tipologia tipologia) {
         this.name = name;
         this.price = price;
         this.tipologia = tipologia;
     }
     public String getName() { return name; }
     public void setName(String name) { this.name = name; }
-    public double getPrice() { return price; }
-    public void setPrice(double price) { this.price = price; }
+    public Double getPrice() { return price; }
+    public void setPrice(Double price) { this.price = price; }
     public Tipologia getTipologia() {
         return tipologia;
     }

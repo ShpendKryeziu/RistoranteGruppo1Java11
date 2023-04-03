@@ -1,12 +1,26 @@
 public enum Allergens {
-        GLUTINE,
-        LATTOSIO,
-        SEDANO,
-        AGLIO,
-        UOVA,
-        CIPOLLA,
-        CAROTE,
-        FRUMENTO,
-        NOCCIOLA,
-        CACAO;
+        GLUTINE("glutine"),
+        LATTOSIO("lattosio"),
+        SEDANO("sedano"),
+        AGLIO("aglio"),
+        UOVA("uova"),
+        CIPOLLA("cipolla"),
+        CAROTE("carotte"),
+        FRUMENTO("frumento"),
+        ARACHIDI("arachidi"),
+        MOLLUSCHI("molluschi"),
+        SOLFITI("solfiti"),
+        CACAO("cacao"),
+        NOCCIOLA ("nocciola"),
+        PESCE("pesce");
+        private final String name;
+
+        Allergens(String name){
+                this.name=name;
+        }
+        public String getName(){
+                return name;
+        }
 }
+
+

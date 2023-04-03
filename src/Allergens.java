@@ -6,5 +6,7 @@ public enum Allergens {
         UOVA,
         CIPOLLA,
         CAROTE,
-        FRUMENTO;
+        FRUMENTO,
+        NOCCIOLA,
+        CACAO;
 }

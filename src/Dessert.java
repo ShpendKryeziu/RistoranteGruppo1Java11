@@ -1,29 +1,51 @@
+import java.util.ArrayList;
+import java.util.Date;
+
 public class Dessert extends Portata {
     private Integer glycemicIndex;
+    private Boolean coloranti;
+    private Boolean bigSizeAvailability;
+    private Integer tempoDiScongelamentoInMin;
+    private ArrayList<Allergens> allergens;
+
+
 
     /**
      * Crea un nuovo oggetto di tipo Dessert
      * @param name il nome del Dessert
      * @param price il costo del Dessert
-     * @param tipologia il tipo di Dessert (di carne/vegano/pesce o bevanda)
      * @param glycemicIndex l'indice glicemico di Dessert.
      */
 
-    public Dessert(String name, Double price, Integer glycemicIndex, Tipologia tipologia) {
-        super(name, price, tipologia, TipoPortata.DESSERT);
+    public Dessert(String name, Double price, Integer glycemicIndex, Boolean coloranti, Boolean bigSizeAvailability,
+                   Integer tempoDiScongelamentoInMin, ArrayList<Allergens> allergens) {
+        super(name, price, null, TipoPortata.DESSERT);
         this.glycemicIndex = glycemicIndex;
+        this.coloranti = coloranti;
+        this.bigSizeAvailability = bigSizeAvailability;
+        this.tempoDiScongelamentoInMin = tempoDiScongelamentoInMin;
+        this.allergens = allergens;
     }
 
-    public int getGlycemicIndex() {return glycemicIndex;}
-    public void setGlycemicIndex(int glycemicIndex) {this.glycemicIndex = glycemicIndex;}
+    public Integer getGlycemicIndex() {return glycemicIndex;}
+    public void setGlycemicIndex(Integer glycemicIndex) {this.glycemicIndex = glycemicIndex;}
 
-    /**
-     * Stampa la descrizione del Dessert come nella classe padre, ma con l'aggiunta dell'indice glicemico del dolce.
-     * @return info su Dessert
-     */
+    public Boolean getColoranti() {return coloranti;}
+    public void setColoranti(Boolean coloranti) {this.coloranti = coloranti;}
+
+    public Boolean getBigSizeAvailability() {return bigSizeAvailability;}
+    public void setBigSizeAvailability(Boolean bigSizeAvailability) {this.bigSizeAvailability = bigSizeAvailability;}
+
+    public Integer getTempoDiScongelamentoInMin() {return tempoDiScongelamentoInMin;}
+    public void setTempoDiScongelamentoInMin(Integer tempoDiScongelamentoInMin) {this.tempoDiScongelamentoInMin = tempoDiScongelamentoInMin;}
+
+
+
 
     @Override
     public void printInfo() {
-        System.out.println(getName() + " --- €" + getPrice() + ". Glycemic Index = " + getGlycemicIndex());
+        System.out.println(getName() + " --- €" + getPrice() + ". Glycemic Index = " + getGlycemicIndex() +
+                ". Big size availability = " + getBigSizeAvailability() + ". Presenza Coloranti =" + getColoranti() +
+                ". Tempo di Scongelamento in Minuti = " + getTempoDiScongelamentoInMin() + " min.");
     }
 }

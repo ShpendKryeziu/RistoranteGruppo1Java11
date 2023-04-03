@@ -45,6 +45,12 @@ public class Main {
         ArrayList<Allergens> canederliAllergens = new ArrayList<>(Arrays.asList(Allergens.GLUTINE,Allergens.LATTOSIO,Allergens.UOVA,Allergens.CIPOLLA,Allergens.AGLIO));
         ArrayList<Allergens> tortelliniAllergens = new ArrayList<>(Arrays.asList(Allergens.GLUTINE,Allergens.UOVA,Allergens.AGLIO,Allergens.SEDANO,Allergens.CAROTE,Allergens.CIPOLLA));
         ArrayList<Allergens> ciorbaAllergens = new ArrayList<>(Arrays.asList(Allergens.FRUMENTO,Allergens.GLUTINE,Allergens.CAROTE,Allergens.UOVA,Allergens.AGLIO,Allergens.CIPOLLA));
+        ArrayList<Allergens> nocciolatoAllergens = new ArrayList<>(Arrays.asList(Allergens.GLUTINE, Allergens.CACAO, Allergens.NOCCIOLA));
+        ArrayList<Allergens> semifreddoAllergens = new ArrayList<>(Arrays.asList());
+        ArrayList<Allergens> salameCioccolatoAllergens = new ArrayList<>(Arrays.asList(Allergens.CACAO, Allergens.LATTOSIO));
+        ArrayList<Allergens> pannaMirtilliLamponiAllergens = new ArrayList<>(Arrays.asList(Allergens.LATTOSIO));
+        ArrayList<Allergens> cremaCatalanaAllergens = new ArrayList<>(Arrays.asList(Allergens.LATTOSIO));
+        ArrayList<Allergens> zuccheroFilatoAllergens = new ArrayList<>(Arrays.asList());
 
 
         // PRIMI
@@ -65,17 +71,17 @@ public class Main {
         Secondo budiniDiSangueDiMaialeAllevatoAlloStatoBrado = new Secondo("Budini di sangue di Maiale allevato allo stato brado", 18.00, Tipologia.CARNE);
 
         // DESSERT
-        Dessert sangueDiCervoCaramellato = new Dessert("Sangue di Cervo caramellato", 4.00, 20, Tipologia.CARNE);
-        Dessert semifreddoDiOcchiDiLince = new Dessert("Semifreddo di occhi di Lince", 5.50, 50, Tipologia.CARNE);
-        Dessert budelloDiCaprioloAlCioccolato = new Dessert("Budello di Capriolo al cioccolato",7.00, 80, Tipologia.CARNE);
-        Dessert cervellaDOrsoAlMirtillo = new Dessert("Cervella d'Orso al mirtillo",13.00, 45, Tipologia.CARNE);
-        Dessert cremaCatalanaSuTeschioDiTasso = new Dessert("Crema Catalana su teschio di Tasso",8.00, 70, Tipologia.CARNE);
-        Dessert zuccheroFilatoSuPeroneDiPuma = new Dessert("Zucchero filato su perone di Puma",14.00, 99, Tipologia.CARNE);
+        Dessert nocciolatoCaramellato = new Dessert("Nocciolato Caramellato", 4.00, 20, false, true, 10, nocciolatoAllergens);
+        Dessert semifreddoAlLimone = new Dessert("Semifreddo al Limone", 5.50, 50, true, true, 5, semifreddoAllergens);
+        Dessert salameAlCioccolatoConBacche = new Dessert("Salame al cioccolato con bacche",7.00, 80, false, true, 15, salameCioccolatoAllergens);
+        Dessert pannaFattaInCasaConMirtilliELamponi = new Dessert("Panna fatta in casa con Mirtilli e Lamponi",13.00, 45, false, true, 0, pannaMirtilliLamponiAllergens);
+        Dessert cremaCatalana = new Dessert("Crema Catalana",8.00, 70, false, false, 0, cremaCatalanaAllergens);
+        Dessert zuccheroFilato = new Dessert("Zucchero filato",14.00, 99, true, false, 0, zuccheroFilatoAllergens);
 
         // NOSTRO MENU
         Menu menuCompleto = new Menu("Balkan Delish", "Burim Dulgheru", Tipologia.CARNE, "Cucina di Carne in Stile Balcanico");
         menuCompleto.addPortate(Arrays.asList(acqua,pepsi,leffe,bonator,raboso,cabernet,merlot,moscato,pinot,ruou,jagermeister,baileys));
-        menuCompleto.addPortate(Arrays.asList(sangueDiCervoCaramellato,semifreddoDiOcchiDiLince,budelloDiCaprioloAlCioccolato,cervellaDOrsoAlMirtillo,cremaCatalanaSuTeschioDiTasso,zuccheroFilatoSuPeroneDiPuma));
+        menuCompleto.addPortate(Arrays.asList(nocciolatoCaramellato,semifreddoAlLimone,salameAlCioccolatoConBacche,pannaFattaInCasaConMirtilliELamponi,cremaCatalana,zuccheroFilato));
         menuCompleto.addPortate(Arrays.asList(pappardelleAlRaguDiCinghiale,gnocchettiAlRisoNeroConCarpaccioDiVitelloCrudoEPeperoni, moussaka, ravioliDiPastaFrescaConRipienoDiVitelloCaprinoEMarsala,fagioliConCostineAffumicate,canederliAllaTirolese,tortelliniInBrodoDiCappone,ciorbaDiCapraTransilvana));
         menuCompleto.addPortate(Arrays.asList(cervelloFrittoDiCapraMontana,fegatelliDiAironeGrigioDeiBalcani,piottinoDiCinghialeNonSelvaticoAllaVodka,linguaDiYakBrasata,budiniDiSangueDiMaialeAllevatoAlloStatoBrado));
 

@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Main {
@@ -36,14 +37,15 @@ public class Main {
 
 
         // Dichiaro ed inizializzo allergeni
-        String[] papardelleAllergens = {"glutine", "latte"};
-        String[] gnocchettiAllergens = {"glutine", "latte", "sedano", "aglio"};
-        String[] moussakaAllergens = {"latte", "uova", "grano/glutine", "cipolla", "aglio"};
-        String[] ravioliAllergens = {"grano/glutine","latte","uova", "aglio"};
-        String[] fagioliAllergens = {"sedano", "cipolla", "aglio"};
-        String[] canederliAllergens = {"grano/glutine","latte","uova","cipolla", "aglio"};
-        String[] tortelliniAllergens = {"grano/glutine","uova", "aglio","sedano", "carote", "cipolla"};
-        String[] ciorbaAllergens = {"frumento/glutine", "carote","uova", "aglio","cipolla"};
+        ArrayList<Allergens> papardelleAllergens = new ArrayList<>(Arrays.asList(Allergens.GLUTINE, Allergens.LATTOSIO));
+        ArrayList<Allergens> gnocchettiAllergens = new ArrayList<>(Arrays.asList(Allergens.GLUTINE, Allergens.LATTOSIO, Allergens.SEDANO, Allergens.AGLIO));
+        ArrayList<Allergens> moussakaAllergens = new ArrayList<>(Arrays.asList(Allergens.LATTOSIO,Allergens.UOVA,Allergens.GLUTINE, Allergens.CIPOLLA,Allergens.AGLIO));
+        ArrayList<Allergens> ravioliAllergens = new ArrayList<>(Arrays.asList(Allergens.GLUTINE, Allergens.LATTOSIO, Allergens.UOVA,Allergens.AGLIO));
+        ArrayList<Allergens> fagioliAllergens = new ArrayList<>(Arrays.asList(Allergens.SEDANO,Allergens.CIPOLLA, Allergens.AGLIO));
+        ArrayList<Allergens> canederliAllergens = new ArrayList<>(Arrays.asList(Allergens.GLUTINE,Allergens.LATTOSIO,Allergens.UOVA,Allergens.CIPOLLA,Allergens.AGLIO));
+        ArrayList<Allergens> tortelliniAllergens = new ArrayList<>(Arrays.asList(Allergens.GLUTINE,Allergens.UOVA,Allergens.AGLIO,Allergens.SEDANO,Allergens.CAROTE,Allergens.CIPOLLA));
+        ArrayList<Allergens> ciorbaAllergens = new ArrayList<>(Arrays.asList(Allergens.FRUMENTO,Allergens.GLUTINE,Allergens.CAROTE,Allergens.UOVA,Allergens.AGLIO,Allergens.CIPOLLA));
+
 
         // PRIMI
         Primo pappardelleAlRaguDiCinghiale = new Primo("Pappardelle al ragù di Cinghiale",6.50, Tipologia.CARNE, papardelleAllergens );

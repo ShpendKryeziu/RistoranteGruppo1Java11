@@ -6,10 +6,9 @@ public class Ristorante {
     private String name;
     private String address;
     private Double rating;
-    private List<Menu> listaMenu;
+    private final List<Menu> listaMenu;
 
-    //TODO parliamone
-    public Ristorante (String name, String address, List<Menu> lista) {
+    public Ristorante (String name, String address) {
         this.name = name;
         this.address = address;
         this.listaMenu = new ArrayList<>();
@@ -23,7 +22,6 @@ public class Ristorante {
     public Double getRating() { return rating; }
     public void setRating(Double rating) { this.rating = rating; }
 
-    //TODO add menù metodi
-    public void addPortata(Menu menu) { listaMenu.add(menu); }
-    public void removePortata(Menu menu) { listaMenu.remove(menu); }
+    public void addMenu(Menu menu) { listaMenu.add(menu); }
+    public void removeMenu(Menu menu) { listaMenu.remove(menu); }
 }

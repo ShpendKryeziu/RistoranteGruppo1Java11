@@ -1,6 +1,5 @@
 public enum Tipologia {
 
-    //TODO sistamare
     CARNE("Carne", "Contiene prodotti ricavati da carcasse animali"),
     VEGETARIANO("Vegetariano", "Contiene prodotti vegetali e solo prodotti naturalmente creati da animali"),
     VEGANO("Vegano", "Contiene esclusivamente prodotti vegetali"),

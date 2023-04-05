@@ -4,7 +4,6 @@ import java.util.List;
 
 
 public class Menu {
-    //TODO manca la tipologia
     private String restaurantName;
     private String chefName;
     private String description;
@@ -58,7 +57,5 @@ public class Menu {
         listaPortata.stream().filter(bevanda -> bevanda.getTipoPortata() == TipoPortata.BEVANDA).forEach(bevanda -> bevanda.printInfo());
         System.out.println("\n BUON APPETITO!!!");
     }
-
-
 }
 

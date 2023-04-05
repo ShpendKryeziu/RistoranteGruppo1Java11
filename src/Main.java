@@ -56,21 +56,21 @@ public class Main {
         ArrayList<Allergens> zuccheroFilatoAllergens = new ArrayList<>(Arrays.asList());
 
         // PRIMI
-        Primo pappardelleAlRaguDiCinghiale = new Primo("Pappardelle al ragù di Cinghiale",6.50, Tipologia.CARNE, papardelleAllergens );
-        Primo gnocchettiAlRisoNeroConCarpaccioDiVitelloCrudoEPeperoni = new Primo("Gnocchetti al riso nero con carpaccio di Vitello crudo e peperoni",7.50, Tipologia.CARNE, gnocchettiAllergens);
-        Primo moussaka = new Primo("Moussaka",6.50, Tipologia.CARNE, moussakaAllergens);
-        Primo ravioliDiPastaFrescaConRipienoDiVitelloCaprinoEMarsala = new Primo("Ravioli di pasta fresca con ripieno di Vitello, caprino e marsala",11.00, Tipologia.CARNE, ravioliAllergens);
-        Primo fagioliConCostineAffumicate = new Primo("Fagioli con costine affumicate",7.50, Tipologia.CARNE, fagioliAllergens);
-        Primo canederliAllaTirolese = new Primo("Canederli alla tirolese",9.50, Tipologia.CARNE, canederliAllergens);
-        Primo tortelliniInBrodoDiCappone = new Primo("Tortellini in brodo di Cappone",12.00, Tipologia.CARNE, tortelliniAllergens);
-        Primo ciorbaDiCapraTransilvana = new Primo("Ciorba di Capra transilvana",10.00, Tipologia.CARNE, ciorbaAllergens);
+        Primo pappardelleAlRaguDiCinghiale = new Primo("Pappardelle al ragù di Cinghiale",6.50, papardelleAllergens );
+        Primo gnocchettiAlRisoNeroConCarpaccioDiVitelloCrudoEPeperoni = new Primo("Gnocchetti al riso nero con carpaccio di Vitello crudo e peperoni",7.50, gnocchettiAllergens);
+        Primo moussaka = new Primo("Moussaka",6.50, moussakaAllergens);
+        Primo ravioliDiPastaFrescaConRipienoDiVitelloCaprinoEMarsala = new Primo("Ravioli di pasta fresca con ripieno di Vitello, caprino e marsala",11.00, ravioliAllergens);
+        Primo fagioliConCostineAffumicate = new Primo("Fagioli con costine affumicate",7.50, fagioliAllergens);
+        Primo canederliAllaTirolese = new Primo("Canederli alla tirolese",9.50, canederliAllergens);
+        Primo tortelliniInBrodoDiCappone = new Primo("Tortellini in brodo di Cappone",12.00, tortelliniAllergens);
+        Primo ciorbaDiCapraTransilvana = new Primo("Ciorba di Capra transilvana",10.00, ciorbaAllergens);
 
         // SECONDI
-        Secondo cervelloFrittoDiCapraMontana = new Secondo("Cervello fritto di Capra montana", 12.50, Tipologia.CARNE);
-        Secondo fegatelliDiAironeGrigioDeiBalcani = new Secondo("Fegatelli di Airone grigio dei Balcani", 11.50, Tipologia.CARNE);
-        Secondo piottinoDiCinghialeNonSelvaticoAllaVodka = new Secondo("Piottino di Cinghiale non selvatico alla vodka", 9.50, Tipologia.CARNE);
-        Secondo linguaDiYakBrasata = new Secondo("Lingua di Yak brasata", 16.80, Tipologia.CARNE);
-        Secondo budiniDiSangueDiMaialeAllevatoAlloStatoBrado = new Secondo("Budini di sangue di Maiale allevato allo stato brado", 18.00, Tipologia.CARNE);
+        Secondo cervelloFrittoDiCapraMontana = new Secondo("Cervello fritto di Capra montana", 12.50);
+        Secondo fegatelliDiAironeGrigioDeiBalcani = new Secondo("Fegatelli di Airone grigio dei Balcani", 11.50);
+        Secondo piottinoDiCinghialeNonSelvaticoAllaVodka = new Secondo("Piottino di Cinghiale non selvatico alla vodka", 9.50);
+        Secondo linguaDiYakBrasata = new Secondo("Lingua di Yak brasata", 16.80);
+        Secondo budiniDiSangueDiMaialeAllevatoAlloStatoBrado = new Secondo("Budini di sangue di Maiale allevato allo stato brado", 18.00);
 
         // DESSERT
         Dessert nocciolatoCaramellato = new Dessert("Nocciolato Caramellato", 4.00, 20, false, true, 10, nocciolatoAllergens);

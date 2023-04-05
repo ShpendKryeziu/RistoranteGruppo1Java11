@@ -1,7 +1,7 @@
 public class Secondo extends Portata {
 
     //TODO sistamare
-    public Secondo(String name, double price, Tipologia tipologia) { super(name, price, tipologia, TipoPortata.SECONDO); }
+    public Secondo(String name, double price) { super(name, price, TipoPortata.SECONDO); }
 
     @Override
     public String toString() {

@@ -3,6 +3,7 @@ import java.util.ArrayList;
 public class Primo extends Portata {
 
     //TODO dobbiamo puntare a lavorare sempre con strutture ad ogetti ad alto livello: no int ma Integer no Array ma arraylist
+    //TODO eliminare come abbiamo detto
     private ArrayList<String> allergens;
 
     /**

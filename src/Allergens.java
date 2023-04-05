@@ -1,4 +1,7 @@
 public enum Allergens {
+
+        //TODO si devono chiamare Enum alla fine
+        // decidete voi quanto effort mettere su questa funzionalità
         GLUTINE("glutine"),
         LATTOSIO("lattosio"),
         SEDANO("sedano"),

@@ -2,6 +2,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Main {
+
+    //TODO spostare in una classe di utility
     public static String emoji_fire = "\uD83D\uDD25";
     public static final String ANSI_BOLD = "\u001B[1m";
     public static final String ANSI_BLACK = "\u001B[30m";

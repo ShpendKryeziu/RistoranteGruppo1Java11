@@ -1,5 +1,7 @@
 public class Bevanda extends Portata {
     private Double capacity;
+
+    // TODO va bene il tipo primitivo booelan
     private Boolean alcoholic;
 
     /**
@@ -11,6 +13,7 @@ public class Bevanda extends Portata {
      * @param alcoholic
      */
 
+    //TODO elimimiamo la tipologia dalla portata e la lasciamo solo nel menù
     public Bevanda(String name, Double price, Double capacity, Boolean alcoholic) {
         super(name, price, null, TipoPortata.BEVANDA);
         this.capacity = capacity;

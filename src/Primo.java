@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class Primo extends Portata {
 
-    private ArrayList<String> allergens;
+    private ArrayList<AllergensEnum> allergens;
 
     /**
      * Crea un nuovo oggetto di tipo primo
@@ -11,18 +11,18 @@ public class Primo extends Portata {
      * @param price     il costo del primo
      * @param allergens la presenza di allergeni
      */
-    public Primo(String name, Double price, ArrayList<String> allergens) {
+    public Primo(String name, Double price, ArrayList<AllergensEnum> allergens) {
         super(name, price, TipoPortata.PRIMO);
         this.allergens = allergens;
     }
 
     // Getters
-    public ArrayList<String> getAllergens() {
+    public ArrayList<AllergensEnum> getAllergens() {
         return allergens;
     }
 
     //Setters
-    public void setAllergens(ArrayList<String> allergens) {
+    public void setAllergens(ArrayList<AllergensEnum> allergens) {
         this.allergens = allergens;
     }
 
@@ -35,8 +35,8 @@ public class Primo extends Portata {
     @Override
     public void printInfo() {
         System.out.print(getName() + " --- €" + getPrice() + "\n" + Main.ANSI_GREY + Main.ANSI_ITALIC + " allergeni = " + Main.ANSI_RESET);
-        for (String allergen : allergens) {
-            System.out.print(Main.ANSI_GREY + Main.ANSI_ITALIC + allergen + " " + Main.ANSI_RESET);
+        for (AllergensEnum allergen : allergens) {
+            System.out.print(Main.ANSI_GREY + Main.ANSI_ITALIC + allergen.getName() + "; " + Main.ANSI_RESET);
         }
         System.out.println();
     }

@@ -4,9 +4,8 @@ import java.util.Date;
 public class Dessert extends Portata {
     private Integer glycemicIndex;
     private boolean coloranti;
-    private boolean bigSizeAvailability;
-    private Integer tempoDiScongelamentoInMin;
-    private ArrayList<Allergens> allergens;
+    private Integer calories;
+    private ArrayList<AllergensEnum> allergens;
 
 
 
@@ -15,15 +14,17 @@ public class Dessert extends Portata {
      * @param name il nome del Dessert
      * @param price il costo del Dessert
      * @param glycemicIndex l'indice glicemico di Dessert.
+     * @param coloranti presenza di coloranti.
+     * @param calories numero di calorie.
+     * @param allergens presenza di relativa lista di allergeni.
      */
 
-    public Dessert(String name, Double price, Integer glycemicIndex, boolean coloranti, boolean bigSizeAvailability,
-                   Integer tempoDiScongelamentoInMin, ArrayList<Allergens> allergens) {
+    public Dessert(String name, Double price, Integer glycemicIndex, boolean coloranti,
+            Integer calories, ArrayList<AllergensEnum> allergens) {
         super(name, price, TipoPortata.DESSERT);
         this.glycemicIndex = glycemicIndex;
         this.coloranti = coloranti;
-        this.bigSizeAvailability = bigSizeAvailability;
-        this.tempoDiScongelamentoInMin = tempoDiScongelamentoInMin;
+        this.calories = calories;
         this.allergens = allergens;
     }
 
@@ -33,19 +34,18 @@ public class Dessert extends Portata {
     public boolean getColoranti() {return coloranti;}
     public void setColoranti(boolean coloranti) {this.coloranti = coloranti;}
 
-    public boolean getBigSizeAvailability() {return bigSizeAvailability;}
-    public void setBigSizeAvailability(boolean bigSizeAvailability) {this.bigSizeAvailability = bigSizeAvailability;}
-
-    public Integer getTempoDiScongelamentoInMin() {return tempoDiScongelamentoInMin;}
-    public void setTempoDiScongelamentoInMin(Integer tempoDiScongelamentoInMin) {this.tempoDiScongelamentoInMin = tempoDiScongelamentoInMin;}
+    public Integer getCalories() {return calories;}
+    public void setCalories(Integer calories) {this.calories = calories;}
 
 
 
 
     @Override
     public void printInfo() {
-        System.out.println(getName() + " --- €" + getPrice() + ". Glycemic Index = " + getGlycemicIndex() +
-                ". Big size availability = " + getBigSizeAvailability() + ". Presenza Coloranti =" + getColoranti() +
-                ". Tempo di Scongelamento in Minuti = " + getTempoDiScongelamentoInMin() + " min.");
+        System.out.print(getName() + " --- €" + getPrice() + "\n" + Main.ANSI_GREY + Main.ANSI_ITALIC + " allergeni = " + Main.ANSI_RESET);
+        for (AllergensEnum allergen : allergens) {
+            System.out.print(Main.ANSI_GREY + Main.ANSI_ITALIC + allergen.getName() + "; " + Main.ANSI_RESET);
+        }
+        System.out.println();
     }
 }

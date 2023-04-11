@@ -41,20 +41,20 @@ public class Main {
 
         // Dichiaro ed inizializzo allergeni
 
-        ArrayList<String> papardelleAllergens = new ArrayList<>(Arrays.asList(Allergens.GLUTINE.getName(), Allergens.LATTOSIO.getName()));
-        ArrayList<String> gnocchettiAllergens = new ArrayList<>(Arrays.asList(Allergens.GLUTINE.getName(), Allergens.LATTOSIO.getName(), Allergens.SEDANO.getName(), Allergens.AGLIO.getName()));
-        ArrayList<String> moussakaAllergens = new ArrayList<>(Arrays.asList(Allergens.LATTOSIO.getName(),Allergens.UOVA.getName(),Allergens.GLUTINE.getName(), Allergens.CIPOLLA.getName(),Allergens.AGLIO.getName()));
-        ArrayList<String> ravioliAllergens = new ArrayList<>(Arrays.asList(Allergens.GLUTINE.getName(), Allergens.LATTOSIO.getName(), Allergens.UOVA.getName(),Allergens.AGLIO.getName()));
-        ArrayList<String> fagioliAllergens = new ArrayList<>(Arrays.asList(Allergens.SEDANO.getName(),Allergens.CIPOLLA.getName(), Allergens.AGLIO.getName()));
-        ArrayList<String> canederliAllergens = new ArrayList<>(Arrays.asList(Allergens.GLUTINE.getName(),Allergens.LATTOSIO.getName(),Allergens.UOVA.getName(),Allergens.CIPOLLA.getName(),Allergens.AGLIO.getName()));
-        ArrayList<String> tortelliniAllergens = new ArrayList<>(Arrays.asList(Allergens.GLUTINE.getName(),Allergens.UOVA.getName(),Allergens.AGLIO.getName(),Allergens.SEDANO.getName(),Allergens.CAROTE.getName(),Allergens.CIPOLLA.getName()));
-        ArrayList<String> ciorbaAllergens = new ArrayList<>(Arrays.asList(Allergens.FRUMENTO.getName(),Allergens.GLUTINE.getName(),Allergens.CAROTE.getName(),Allergens.UOVA.getName(),Allergens.AGLIO.getName(),Allergens.CIPOLLA.getName()));
-        ArrayList<Allergens> nocciolatoAllergens = new ArrayList<>(Arrays.asList(Allergens.GLUTINE, Allergens.CACAO, Allergens.NOCCIOLA));
-        ArrayList<Allergens> semifreddoAllergens = new ArrayList<>(Arrays.asList());
-        ArrayList<Allergens> salameCioccolatoAllergens = new ArrayList<>(Arrays.asList(Allergens.CACAO, Allergens.LATTOSIO));
-        ArrayList<Allergens> pannaMirtilliLamponiAllergens = new ArrayList<>(Arrays.asList(Allergens.LATTOSIO));
-        ArrayList<Allergens> cremaCatalanaAllergens = new ArrayList<>(Arrays.asList(Allergens.LATTOSIO));
-        ArrayList<Allergens> zuccheroFilatoAllergens = new ArrayList<>(Arrays.asList());
+        ArrayList<AllergensEnum> papardelleAllergens = new ArrayList<>(Arrays.asList(AllergensEnum.GLUTINE, AllergensEnum.LATTE));
+        ArrayList<AllergensEnum> gnocchettiAllergens = new ArrayList<>(Arrays.asList(AllergensEnum.GLUTINE, AllergensEnum.LATTE, AllergensEnum.SEDANO, AllergensEnum.SENAPE));
+        ArrayList<AllergensEnum> moussakaAllergens = new ArrayList<>(Arrays.asList(AllergensEnum.LATTE,AllergensEnum.UOVA,AllergensEnum.GLUTINE, AllergensEnum.SESAMO,AllergensEnum.SENAPE));
+        ArrayList<AllergensEnum> ravioliAllergens = new ArrayList<>(Arrays.asList(AllergensEnum.GLUTINE, AllergensEnum.LATTE, AllergensEnum.UOVA,AllergensEnum.SENAPE));
+        ArrayList<AllergensEnum> fagioliAllergens = new ArrayList<>(Arrays.asList(AllergensEnum.SEDANO,AllergensEnum.SESAMO, AllergensEnum.SENAPE));
+        ArrayList<AllergensEnum> canederliAllergens = new ArrayList<>(Arrays.asList(AllergensEnum.GLUTINE,AllergensEnum.LATTE,AllergensEnum.UOVA,AllergensEnum.SESAMO,AllergensEnum.SENAPE));
+        ArrayList<AllergensEnum> tortelliniAllergens = new ArrayList<>(Arrays.asList(AllergensEnum.GLUTINE,AllergensEnum.UOVA,AllergensEnum.SENAPE,AllergensEnum.SEDANO,AllergensEnum.LUPINI,AllergensEnum.SESAMO));
+        ArrayList<AllergensEnum> ciorbaAllergens = new ArrayList<>(Arrays.asList(AllergensEnum.GLUTINE,AllergensEnum.LUPINI,AllergensEnum.UOVA,AllergensEnum.SENAPE,AllergensEnum.SESAMO));
+        ArrayList<AllergensEnum> nocciolatoAllergens = new ArrayList<>(Arrays.asList(AllergensEnum.GLUTINE, AllergensEnum.ARACHIDI, AllergensEnum.FRUTTAGUSCIO));
+        ArrayList<AllergensEnum> semifreddoAllergens = new ArrayList<>(Arrays.asList(AllergensEnum.LATTE));
+        ArrayList<AllergensEnum> salameCioccolatoAllergens = new ArrayList<>(Arrays.asList(AllergensEnum.ARACHIDI, AllergensEnum.LATTE));
+        ArrayList<AllergensEnum> pannaMirtilliLamponiAllergens = new ArrayList<>(Arrays.asList(AllergensEnum.LATTE));
+        ArrayList<AllergensEnum> cremaCatalanaAllergens = new ArrayList<>(Arrays.asList(AllergensEnum.LATTE));
+        ArrayList<AllergensEnum> zuccheroFilatoAllergens = new ArrayList<>(Arrays.asList(AllergensEnum.FRUTTAGUSCIO));
 
         // PRIMI
         Primo pappardelleAlRaguDiCinghiale = new Primo("Pappardelle al ragù di Cinghiale",6.50, papardelleAllergens );
@@ -74,12 +74,12 @@ public class Main {
         Secondo budiniDiSangueDiMaialeAllevatoAlloStatoBrado = new Secondo("Budini di sangue di Maiale allevato allo stato brado", 18.00);
 
         // DESSERT
-        Dessert nocciolatoCaramellato = new Dessert("Nocciolato Caramellato", 4.00, 20, false, true, 10, nocciolatoAllergens);
-        Dessert semifreddoAlLimone = new Dessert("Semifreddo al Limone", 5.50, 50, true, true, 5, semifreddoAllergens);
-        Dessert salameAlCioccolatoConBacche = new Dessert("Salame al cioccolato con bacche",7.00, 80, false, true, 15, salameCioccolatoAllergens);
-        Dessert pannaFattaInCasaConMirtilliELamponi = new Dessert("Panna fatta in casa con Mirtilli e Lamponi",13.00, 45, false, true, 0, pannaMirtilliLamponiAllergens);
-        Dessert cremaCatalana = new Dessert("Crema Catalana",8.00, 70, false, false, 0, cremaCatalanaAllergens);
-        Dessert zuccheroFilato = new Dessert("Zucchero filato",14.00, 99, true, false, 0, zuccheroFilatoAllergens);
+        Dessert nocciolatoCaramellato = new Dessert("Nocciolato Caramellato", 4.00, 20, false, 10, nocciolatoAllergens);
+        Dessert semifreddoAlLimone = new Dessert("Semifreddo al Limone", 5.50, 50, true, 5, semifreddoAllergens);
+        Dessert salameAlCioccolatoConBacche = new Dessert("Salame al cioccolato con bacche",7.00, 80, false,  15, salameCioccolatoAllergens);
+        Dessert pannaFattaInCasaConMirtilliELamponi = new Dessert("Panna fatta in casa con Mirtilli e Lamponi",13.00, 45, false, 0, pannaMirtilliLamponiAllergens);
+        Dessert cremaCatalana = new Dessert("Crema Catalana",8.00, 70, false,  0, cremaCatalanaAllergens);
+        Dessert zuccheroFilato = new Dessert("Zucchero filato",14.00, 99, true, 0, zuccheroFilatoAllergens);
 
         // NOSTRO RISTORANTE CON MENU
         Ristorante ristoranteGruppo1 = new Ristorante("Eccellenza Balcanica", "Via Olimpo 69, Sofia");
@@ -92,6 +92,6 @@ public class Main {
 
         //menuCompleto.printMenu();
         Ristorante.printMenuList(ristoranteGruppo1.menuPerTipologia(Tipologia.CARNE));
-        System.out.println(menuCompleto.averagePrice());
+        System.out.println("Prezzo Medio Menu Completo (NO BEVANDE) = " + menuCompleto.averagePrice() + " Euri");
     }
 }

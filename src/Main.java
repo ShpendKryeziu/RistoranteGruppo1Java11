@@ -88,5 +88,6 @@ public class Main {
         menuCompleto.addPortate(Arrays.asList(cervelloFrittoDiCapraMontana,fegatelliDiAironeGrigioDeiBalcani,piottinoDiCinghialeNonSelvaticoAllaVodka,linguaDiYakBrasata,budiniDiSangueDiMaialeAllevatoAlloStatoBrado));
 
         menuCompleto.printMenu();
+        System.out.println(menuCompleto.averagePrice());
     }
 }

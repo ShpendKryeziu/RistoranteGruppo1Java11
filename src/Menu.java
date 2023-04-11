@@ -57,5 +57,14 @@ public class Menu {
         listaPortata.stream().filter(bevanda -> bevanda.getTipoPortata() == TipoPortata.BEVANDA).forEach(bevanda -> bevanda.printInfo());
         System.out.println("\n BUON APPETITO!!!");
     }
-}
 
+    /**
+     * Genera un prezzo medio dell'intero menù escludendo le bevande.
+     * @return un Double arrotondato all'intero più basso
+     */
+    public Double averagePrice() {
+        Long platesCount = listaPortata.stream().filter(p -> p.getTipoPortata() != TipoPortata.BEVANDA).count();
+        Double totalPrice = listaPortata.stream().filter(p -> p.getTipoPortata() != TipoPortata.BEVANDA).mapToDouble(Portata::getPrice).sum();
+        return Math.floor(totalPrice/platesCount);
+    }
+}

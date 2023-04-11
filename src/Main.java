@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class Main {
 
@@ -80,14 +81,17 @@ public class Main {
         Dessert cremaCatalana = new Dessert("Crema Catalana",8.00, 70, false, false, 0, cremaCatalanaAllergens);
         Dessert zuccheroFilato = new Dessert("Zucchero filato",14.00, 99, true, false, 0, zuccheroFilatoAllergens);
 
-        // NOSTRO MENU
+        // NOSTRO RISTORANTE CON MENU
+        Ristorante ristoranteGruppo1 = new Ristorante("Eccellenza Balcanica", "Via Olimpo 69, Sofia");
         Menu menuCompleto = new Menu("Balkan Delish", "Burim Dulgheru", Tipologia.CARNE, "Cucina di Carne in Stile Balcanico");
+        ristoranteGruppo1.addMenu(menuCompleto);
         menuCompleto.addPortate(Arrays.asList(acqua,pepsi,leffe,bonator,raboso,cabernet,merlot,moscato,pinot,ruou,jagermeister,baileys));
         menuCompleto.addPortate(Arrays.asList(nocciolatoCaramellato,semifreddoAlLimone,salameAlCioccolatoConBacche,pannaFattaInCasaConMirtilliELamponi,cremaCatalana,zuccheroFilato));
         menuCompleto.addPortate(Arrays.asList(pappardelleAlRaguDiCinghiale,gnocchettiAlRisoNeroConCarpaccioDiVitelloCrudoEPeperoni, moussaka, ravioliDiPastaFrescaConRipienoDiVitelloCaprinoEMarsala,fagioliConCostineAffumicate,canederliAllaTirolese,tortelliniInBrodoDiCappone,ciorbaDiCapraTransilvana));
         menuCompleto.addPortate(Arrays.asList(cervelloFrittoDiCapraMontana,fegatelliDiAironeGrigioDeiBalcani,piottinoDiCinghialeNonSelvaticoAllaVodka,linguaDiYakBrasata,budiniDiSangueDiMaialeAllevatoAlloStatoBrado));
 
-        menuCompleto.printMenu();
+        //menuCompleto.printMenu();
+        Ristorante.printMenuList(ristoranteGruppo1.menuPerTipologia(Tipologia.CARNE));
         System.out.println(menuCompleto.averagePrice());
     }
 }

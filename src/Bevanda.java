@@ -12,7 +12,7 @@ public class Bevanda extends Portata {
      */
 
     public Bevanda(String name, Double price, Double capacity, boolean alcoholic) {
-        super(name, price, TipoPortata.BEVANDA);
+        super(name, price, TipoPortataEnum.BEVANDA);
         this.capacity = capacity;
         this.alcoholic = alcoholic;
     }
@@ -21,8 +21,6 @@ public class Bevanda extends Portata {
     public boolean getAlcoholic() { return alcoholic; }
     public void setAlcoholic(boolean alcoholic) { this.alcoholic = alcoholic; }
 
-    //TODO se è private devo accedere dal field, perchè è l'unica volte che lo posso usare
-
 
     /**
      * Stampa la descrizione della bevanda come nella classe padre, ma con aggiunta la quantità in Litri.
@@ -30,6 +28,6 @@ public class Bevanda extends Portata {
      */
     @Override
     public void printInfo() {
-        System.out.println(getName() + ", " + getCapacity() + "L" + " --- €" + getPrice());
+        System.out.println(getName() + ", " + this.capacity + "L" + " --- €" + getPrice());
     }
 }

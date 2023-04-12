@@ -1,4 +1,4 @@
-public enum TipoPortata {
+public enum TipoPortataEnum {
 
     BEVANDA("Bevande", "tipologia per la portata bevande"),
     PRIMO("Primo", "tipologia per la portata primo"),
@@ -8,7 +8,7 @@ public enum TipoPortata {
     private final String nome;
     private final String descrizione;
 
-    TipoPortata(String nome, String descrizione) {
+    TipoPortataEnum(String nome, String descrizione) {
         this.nome = nome;
         this.descrizione = descrizione;
     }

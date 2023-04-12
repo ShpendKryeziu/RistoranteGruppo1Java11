@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -28,24 +27,29 @@ public class Ristorante {
 
     /**
      * Questo metodo serve per richiedere al ristorante una lista di menu di una specifica tipologia (CARNE, PESCE, VEGANO
-     *      VEGETARIANO).
+     *      VEGETARIANO). Il metodo stampa direttamente la lista dei menu corrispondenti.
      * @param tipo è la tipologia di menu (CARNE, VEGANO, ecc)
-     * @return una Lista di Menu presenti nella lista completa del ristorante che includono la tipologia richiesta
      */
-    public List<Menu> menuPerTipologia (Tipologia tipo) {
-        return listaMenu.stream().filter(menu -> menu.getTipologia() == tipo).collect(Collectors.toList());
+    public void menuPerTipologia(TipologiaEnum tipo) {
+        List<Menu> tempList = listaMenu.stream().filter(menu -> menu.getTipologia() == tipo).collect(Collectors.toList());
+        Integer iterazioni = 0;
+        if (tempList.isEmpty()) {
+            System.out.println("Non c'è un menu che " + tipo.getDescrizione());
+        } else {
+            for (Menu menu : tempList) {
+                System.out.println("Menu numero " + (iterazioni + 1) + "\n");
+                menu.printMenu();
+                System.out.println("\n");
+            }
+        }
     }
 
-
-    //TODO le chiamata statiche servono solo per farci una dare una risorsa che sarà sempre la stessa
-    //provate a creare più ristoranti e vedete un po come si comporta( anzi provate a mettere la lista static e vedete cosa succede)
     /**
-     * Questo metodo serve per stampare direttamente tutti i menu di una lista, senza dover ciclarli manualmente in main
-     * @param listaMenu è una lista che può essere quella tornata da menuPerTipologia() o da getListaMenu()
+     * Questo metodo serve per stampare direttamente la lista menu del ristorante
      */
-    public static void printMenuList() {
+    public void printMenuList() {
         Integer iterazioni = 0;
-        for (Menu menu : listaMenu) {
+        for (Menu menu : this.listaMenu) {
             System.out.println("Menu numero " + (iterazioni+1) + "\n");
             menu.printMenu();
             System.out.println("\n");

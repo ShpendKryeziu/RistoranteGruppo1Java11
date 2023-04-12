@@ -7,7 +7,7 @@ public class Menu {
     private String restaurantName;
     private String chefName;
     private String description;
-    private Tipologia tipologia;
+    private TipologiaEnum tipologia;
     private List<Portata> listaPortata;
 
     /**
@@ -18,16 +18,15 @@ public class Menu {
      * @param description specifica la tipologia dietologica del menù
      */
 
-    public Menu(String name, String chef, Tipologia tipologia, String description) {
+    public Menu(String name, String chef, TipologiaEnum tipologia, String description) {
         this.restaurantName = name;
         this.chefName = chef;
         this.tipologia = tipologia;
         this.description = description;
-        //TODO inizializzare tutto sempre nel costruttore, best pratica
         this.listaPortata = new ArrayList<>();
     }
 
-    //Getters and Setters
+    //GETTERS AND SETTERS
     public String getRestaurantName() {
         return restaurantName;
     }
@@ -44,11 +43,11 @@ public class Menu {
         this.chefName = chefName;
     }
 
-    public Tipologia getTipologia() {
+    public TipologiaEnum getTipologia() {
         return tipologia;
     }
 
-    public void setTipologia(Tipologia tipologia) {
+    public void setTipologia(TipologiaEnum tipologia) {
         this.tipologia = tipologia;
     }
 
@@ -76,26 +75,24 @@ public class Menu {
         listaPortata.addAll(portata);
     }
 
-    // TODO metodi per i menù vegano e di pesce
-
     /***
      * Stampa il menu con il nome del ristorante e dello chef e tutte le portate divise per categoria + un messaggio finale
      */
 
     public void printMenu() {
-        System.out.println(TextStyle.ANSI_RED_BACKGROUND.getValue() +
-                TextStyle.EMOJY_FIRE + TextStyle.ANSI_BOLD + TextStyle.ANSI_BLACK + getRestaurantName() +
-                TextStyle.EMOJY_FIRE + TextStyle.ANSI_RESET + "\n");
+        System.out.println(TextStyleEnum.ANSI_RED_BACKGROUND.getValue() +
+                TextStyleEnum.EMOJY_FIRE.getValue() + TextStyleEnum.ANSI_BOLD.getValue() + TextStyleEnum.ANSI_BLACK.getValue() + getRestaurantName() +
+                TextStyleEnum.EMOJY_FIRE.getValue() + TextStyleEnum.ANSI_RESET.getValue() + "\n");
         System.out.println("Chef: " + getChefName() + "\n");
         System.out.println(getDescription() + "\n");
         System.out.println("\n PRIMI \n");
-        listaPortata.stream().filter(primo -> primo.getTipoPortata() == TipoPortata.PRIMO).forEach(primo -> primo.printInfo());
+        listaPortata.stream().filter(primo -> primo.getTipoPortata() == TipoPortataEnum.PRIMO).forEach(primo -> primo.printInfo());
         System.out.println("\n SECONDI \n");
-        listaPortata.stream().filter(secondo -> secondo.getTipoPortata() == TipoPortata.SECONDO).forEach(secondo -> secondo.printInfo());
+        listaPortata.stream().filter(secondo -> secondo.getTipoPortata() == TipoPortataEnum.SECONDO).forEach(secondo -> secondo.printInfo());
         System.out.println("\n DESSERT \n");
-        listaPortata.stream().filter(dessert -> dessert.getTipoPortata() == TipoPortata.DESSERT).forEach(dessert -> dessert.printInfo());
+        listaPortata.stream().filter(dessert -> dessert.getTipoPortata() == TipoPortataEnum.DESSERT).forEach(dessert -> dessert.printInfo());
         System.out.println("\n BEVANDE \n");
-        listaPortata.stream().filter(bevanda -> bevanda.getTipoPortata() == TipoPortata.BEVANDA).forEach(bevanda -> bevanda.printInfo());
+        listaPortata.stream().filter(bevanda -> bevanda.getTipoPortata() == TipoPortataEnum.BEVANDA).forEach(bevanda -> bevanda.printInfo());
         System.out.println("\n BUON APPETITO!!!");
     }
 
@@ -105,8 +102,8 @@ public class Menu {
      * @return un Double arrotondato all'intero più basso
      */
     public Double averagePrice() {
-        Long platesCount = listaPortata.stream().filter(p -> p.getTipoPortata() != TipoPortata.BEVANDA).count();
-        Double totalPrice = listaPortata.stream().filter(p -> p.getTipoPortata() != TipoPortata.BEVANDA).mapToDouble(Portata::getPrice).sum();
+        Long platesCount = listaPortata.stream().filter(p -> p.getTipoPortata() != TipoPortataEnum.BEVANDA).count();
+        Double totalPrice = listaPortata.stream().filter(p -> p.getTipoPortata() != TipoPortataEnum.BEVANDA).mapToDouble(Portata::getPrice).sum();
         return Math.floor(totalPrice / platesCount);
     }
 }

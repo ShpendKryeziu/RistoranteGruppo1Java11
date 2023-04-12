@@ -2,7 +2,7 @@ public abstract class Portata {
 
     private String name;
     private Double price;
-    private TipoPortata tipoPortata;
+    private TipoPortataEnum tipoPortata;
 
     /**
      *Imposta una portata che abbia un nome, un prezzo e una tipologia dietologica.
@@ -10,7 +10,7 @@ public abstract class Portata {
      * @param price
      */
 
-    public Portata(String name, Double price, TipoPortata portata) {
+    public Portata(String name, Double price, TipoPortataEnum portata) {
         this.name = name;
         this.price = price;
         this.tipoPortata = portata;
@@ -19,8 +19,8 @@ public abstract class Portata {
     public void setName(String name) { this.name = name; }
     public Double getPrice() { return price; }
     public void setPrice(Double price) { this.price = price; }
-    public TipoPortata getTipoPortata() { return tipoPortata; }
-    public void setTipoPortata(TipoPortata portata) { this.tipoPortata = portata; }
+    public TipoPortataEnum getTipoPortata() { return tipoPortata; }
+    public void setTipoPortata(TipoPortataEnum portata) { this.tipoPortata = portata; }
     /**
      * Stampa la portata in console come fosse in un menù.
      * @return la descrizione della portata

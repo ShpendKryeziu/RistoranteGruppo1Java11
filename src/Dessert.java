@@ -23,7 +23,7 @@ public class Dessert extends Portata {
 
     public Dessert(String name, Double price, Integer glycemicIndex, boolean coloranti,
             Integer calories, ArrayList<AllergensEnum> allergens) {
-        super(name, price, TipoPortata.DESSERT);
+        super(name, price, TipoPortataEnum.DESSERT);
         this.glycemicIndex = glycemicIndex;
         this.coloranti = coloranti;
         this.calories = calories;
@@ -44,9 +44,9 @@ public class Dessert extends Portata {
 
     @Override
     public void printInfo() {
-        System.out.print(getName() + " --- €" + getPrice() + "\n" + TextStyle.ANSI_GREY + TextStyle.ANSI_ITALIC + " allergeni = " + TextStyle.ANSI_RESET);
+        System.out.print(getName() + " --- €" + getPrice() + "\n" + TextStyleEnum.ANSI_GREY.getValue() + TextStyleEnum.ANSI_ITALIC.getValue() + " allergeni = " + TextStyleEnum.ANSI_RESET.getValue());
         for (AllergensEnum allergen : allergens) {
-            System.out.print(TextStyle.ANSI_GREY.toString() + TextStyle.ANSI_ITALIC + allergen.getName() + "; " + TextStyle.ANSI_RESET);
+            System.out.print(TextStyleEnum.ANSI_GREY.getValue() + TextStyleEnum.ANSI_ITALIC.getValue() + allergen.getName() + "; " + TextStyleEnum.ANSI_RESET.getValue());
         }
         System.out.println();
     }

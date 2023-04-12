@@ -12,7 +12,7 @@ public class Primo extends Portata {
      * @param allergens la presenza di allergeni
      */
     public Primo(String name, Double price, ArrayList<AllergensEnum> allergens) {
-        super(name, price, TipoPortata.PRIMO);
+        super(name, price, TipoPortataEnum.PRIMO);
         this.allergens = allergens;
     }
 
@@ -34,9 +34,9 @@ public class Primo extends Portata {
 
     @Override
     public void printInfo() {
-        System.out.print(getName() + " --- €" + getPrice() + "\n" + TextStyle.ANSI_GREY + TextStyle.ANSI_ITALIC + " allergeni = " + TextStyle.ANSI_RESET);
+        System.out.print(getName() + " --- €" + getPrice() + "\n" + TextStyleEnum.ANSI_GREY.getValue() + TextStyleEnum.ANSI_ITALIC.getValue() + " allergeni = " + TextStyleEnum.ANSI_RESET.getValue());
         for (AllergensEnum allergen : allergens) {
-            System.out.print(TextStyle.ANSI_GREY.toString() + TextStyle.ANSI_ITALIC + allergen.getName() + "; " + TextStyle.ANSI_RESET);
+            System.out.print(TextStyleEnum.ANSI_GREY.getValue() + TextStyleEnum.ANSI_ITALIC.getValue() + allergen.getName() + "; " + TextStyleEnum.ANSI_RESET.getValue());
         }
         System.out.println();
     }

@@ -64,7 +64,7 @@ public class Main {
 
         // NOSTRO RISTORANTE CON MENU
         Ristorante ristoranteGruppo1 = new Ristorante("Eccellenza Balcanica", "Via Olimpo 69, Sofia");
-        Menu menuCompleto = new Menu("Balkan Delish", "Burim Dulgheru", Tipologia.CARNE, "Cucina di Carne in Stile Balcanico");
+        Menu menuCompleto = new Menu("Balkan Delish", "Burim Dulgheru", TipologiaEnum.CARNE, "Cucina di Carne in Stile Balcanico");
         ristoranteGruppo1.addMenu(menuCompleto);
         menuCompleto.addPortate(Arrays.asList(acqua,pepsi,leffe,bonator,raboso,cabernet,merlot,moscato,pinot,ruou,jagermeister,baileys));
         menuCompleto.addPortate(Arrays.asList(nocciolatoCaramellato,semifreddoAlLimone,salameAlCioccolatoConBacche,pannaFattaInCasaConMirtilliELamponi,cremaCatalana,zuccheroFilato));
@@ -72,7 +72,7 @@ public class Main {
         menuCompleto.addPortate(Arrays.asList(cervelloFrittoDiCapraMontana,fegatelliDiAironeGrigioDeiBalcani,piottinoDiCinghialeNonSelvaticoAllaVodka,linguaDiYakBrasata,budiniDiSangueDiMaialeAllevatoAlloStatoBrado));
 
         //menuCompleto.printMenu();
-        ristoranteGruppo1.printMenuList();
+        ristoranteGruppo1.menuPerTipologia(TipologiaEnum.VEGANO);
         System.out.println("Prezzo Medio Menu Completo (NO BEVANDE) = " + menuCompleto.averagePrice() + " Euri");
     }
 }

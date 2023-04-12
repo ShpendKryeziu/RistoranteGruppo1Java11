@@ -1,5 +1,8 @@
 import java.util.ArrayList;
 
+//TODO java doc in sintesi per capire cos'è questa classe
+
+
 public class Dessert extends Portata {
     private Integer glycemicIndex;
     private boolean coloranti;
@@ -37,7 +40,7 @@ public class Dessert extends Portata {
     public void setCalories(Integer calories) {this.calories = calories;}
 
 
-
+//TODO java doc
 
     @Override
     public void printInfo() {

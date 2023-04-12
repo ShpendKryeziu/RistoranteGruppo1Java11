@@ -1,4 +1,7 @@
 public class Cliente {
+
+    //TODO non stampa nulla di info, non ha un campo città, generiamo il codice fiscale?
+
     private String username;
     private String name;
     private String surname;

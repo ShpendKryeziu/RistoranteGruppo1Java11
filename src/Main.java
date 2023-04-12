@@ -72,7 +72,7 @@ public class Main {
         menuCompleto.addPortate(Arrays.asList(cervelloFrittoDiCapraMontana,fegatelliDiAironeGrigioDeiBalcani,piottinoDiCinghialeNonSelvaticoAllaVodka,linguaDiYakBrasata,budiniDiSangueDiMaialeAllevatoAlloStatoBrado));
 
         //menuCompleto.printMenu();
-        Ristorante.printMenuList(ristoranteGruppo1.menuPerTipologia(Tipologia.CARNE));
+        ristoranteGruppo1.printMenuList();
         System.out.println("Prezzo Medio Menu Completo (NO BEVANDE) = " + menuCompleto.averagePrice() + " Euri");
     }
 }

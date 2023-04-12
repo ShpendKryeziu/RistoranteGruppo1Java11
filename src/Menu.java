@@ -8,12 +8,13 @@ public class Menu {
     private String chefName;
     private String description;
     private Tipologia tipologia;
-    private List<Portata> listaPortata = new ArrayList<>();
+    private List<Portata> listaPortata;
 
     /**
      * Crea un oggetto Menu che ha come parametri il nome del ristorante e dello chef e il tipo di dieta
-     * @param name il nome del ristorante
-     * @param chef il nome dello chef
+     *
+     * @param name        il nome del ristorante
+     * @param chef        il nome dello chef
      * @param description specifica la tipologia dietologica del menù
      */
 
@@ -22,20 +23,58 @@ public class Menu {
         this.chefName = chef;
         this.tipologia = tipologia;
         this.description = description;
+        //TODO inizializzare tutto sempre nel costruttore, best pratica
+        this.listaPortata = new ArrayList<>();
     }
+
     //Getters and Setters
-    public String getRestaurantName() { return restaurantName; }
-    public void setRestaurantName(String restaurantName) { this.restaurantName = restaurantName; }
-    public String getChefName() { return chefName; }
-    public void setChefName(String chefName) { this.chefName = chefName; }
-    public Tipologia getTipologia() { return tipologia; }
-    public void setTipologia(Tipologia tipologia) { this.tipologia = tipologia; }
-    public String getDescription() { return description; }
-    public void setDescription(String description) { this.description = description; }
-    public List<Portata> getPortate() { return listaPortata; }
-    public void addPortata(Portata portata) { listaPortata.add(portata); }
-    public void removePortata(Portata portata) { listaPortata.remove(portata); }
-    public void addPortate(Collection<Portata> portata) { listaPortata.addAll(portata); }
+    public String getRestaurantName() {
+        return restaurantName;
+    }
+
+    public void setRestaurantName(String restaurantName) {
+        this.restaurantName = restaurantName;
+    }
+
+    public String getChefName() {
+        return chefName;
+    }
+
+    public void setChefName(String chefName) {
+        this.chefName = chefName;
+    }
+
+    public Tipologia getTipologia() {
+        return tipologia;
+    }
+
+    public void setTipologia(Tipologia tipologia) {
+        this.tipologia = tipologia;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public List<Portata> getPortate() {
+        return listaPortata;
+    }
+
+    public void addPortata(Portata portata) {
+        listaPortata.add(portata);
+    }
+
+    public void removePortata(Portata portata) {
+        listaPortata.remove(portata);
+    }
+
+    public void addPortate(Collection<Portata> portata) {
+        listaPortata.addAll(portata);
+    }
 
     // TODO metodi per i menù vegano e di pesce
 
@@ -44,7 +83,9 @@ public class Menu {
      */
 
     public void printMenu() {
-        System.out.println(TextStyle.ANSI_RED_BACKGROUND.toString() + TextStyle.EMOJY_FIRE + TextStyle.ANSI_BOLD + TextStyle.ANSI_BLACK + getRestaurantName() + TextStyle.EMOJY_FIRE + TextStyle.ANSI_RESET + "\n");
+        System.out.println(TextStyle.ANSI_RED_BACKGROUND.getValue() +
+                TextStyle.EMOJY_FIRE + TextStyle.ANSI_BOLD + TextStyle.ANSI_BLACK + getRestaurantName() +
+                TextStyle.EMOJY_FIRE + TextStyle.ANSI_RESET + "\n");
         System.out.println("Chef: " + getChefName() + "\n");
         System.out.println(getDescription() + "\n");
         System.out.println("\n PRIMI \n");
@@ -60,11 +101,12 @@ public class Menu {
 
     /**
      * Genera un prezzo medio dell'intero menù escludendo le bevande.
+     *
      * @return un Double arrotondato all'intero più basso
      */
     public Double averagePrice() {
         Long platesCount = listaPortata.stream().filter(p -> p.getTipoPortata() != TipoPortata.BEVANDA).count();
         Double totalPrice = listaPortata.stream().filter(p -> p.getTipoPortata() != TipoPortata.BEVANDA).mapToDouble(Portata::getPrice).sum();
-        return Math.floor(totalPrice/platesCount);
+        return Math.floor(totalPrice / platesCount);
     }
 }

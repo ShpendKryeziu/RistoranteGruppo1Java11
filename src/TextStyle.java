@@ -1,26 +1,35 @@
-public enum TextStyle {
-    ANSI_BLACK_BACKGROUND("\u001B[40m"),
-    ANSI_GREEN_BACKGROUND("\u001B[42m"),
-    ANSI_YELLOW_BACKGROUND("\u001B[43m"),
-    ANSI_BLUE_BACKGROUND("\u001B[44m"),
-    ANSI_PURPLE_BACKGROUND("\u001B[45m"),
-    ANSI_CYAN_BACKGROUND("\u001B[46m"),
-    ANSI_WHITE_BACKGROUND("\u001B[47m"),
-    ANSI_BRIGHT_WHITE("\u001B[97m"),
-    ANSI_RED_FONT("\u001B[31m"),
-    ANSI_BOLD("\u001B[1m"),
-    ANSI_BLACK("\u001B[30m"),
-    ANSI_ITALIC("\u001B[3m"),
-    ANSI_GREY("\u001B[90m"),
-    ANSI_RED_BACKGROUND("\u001B[41m"),
-    EMOJY_FIRE("\uD83D\uDD25"),
-    ANSI_RESET("\u001B[0m");
 
-    private final String string;
-    TextStyle(String string) {
-        this.string = string;
+
+
+public enum TextStyle {
+    ANSI_BLACK_BACKGROUND("\u001B[40m", "ANSI_BLACK_BACKGROUND"),
+    ANSI_GREEN_BACKGROUND("\u001B[42m", "ANSI_BLACK_BACKGROUND"),
+    ANSI_YELLOW_BACKGROUND("\u001B[43m", "ANSI_BLACK_BACKGROUND"),
+    ANSI_BLUE_BACKGROUND("\u001B[44m", "ANSI_BLACK_BACKGROUND"),
+    ANSI_PURPLE_BACKGROUND("\u001B[45m", "ANSI_BLACK_BACKGROUND"),
+    ANSI_CYAN_BACKGROUND("\u001B[46m", "ANSI_BLACK_BACKGROUND"),
+    ANSI_WHITE_BACKGROUND("\u001B[47m", "ANSI_BLACK_BACKGROUND"),
+    ANSI_BRIGHT_WHITE("\u001B[97m", "ANSI_BLACK_BACKGROUND"),
+    ANSI_RED_FONT("\u001B[31m", "ANSI_BLACK_BACKGROUND"),
+    ANSI_BOLD("\u001B[1m", "ANSI_BLACK_BACKGROUND"),
+    ANSI_BLACK("\u001B[30m", "ANSI_BLACK_BACKGROUND"),
+    ANSI_ITALIC("\u001B[3m", "ANSI_BLACK_BACKGROUND"),
+    ANSI_GREY("\u001B[90m", "ANSI_BLACK_BACKGROUND"),
+    ANSI_RED_BACKGROUND("\u001B[41m", "ANSI_BLACK_BACKGROUND"),
+    EMOJY_FIRE("\uD83D\uDD25", "ANSI_BLACK_BACKGROUND"),
+    ANSI_RESET("\u001B[0m", "ANSI_BLACK_BACKGROUND");
+
+    private final String value;
+    TextStyle(String value, String ansi_black_background) {
+        this.value = value;
     }
 
+
+    public String getValue() {
+        return value;
+    }
+
+    //TODO rimuovere
     @Override
     public String toString() {
         return string;

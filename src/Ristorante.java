@@ -36,11 +36,14 @@ public class Ristorante {
         return listaMenu.stream().filter(menu -> menu.getTipologia() == tipo).collect(Collectors.toList());
     }
 
+
+    //TODO le chiamata statiche servono solo per farci una dare una risorsa che sarà sempre la stessa
+    //provate a creare più ristoranti e vedete un po come si comporta( anzi provate a mettere la lista static e vedete cosa succede)
     /**
      * Questo metodo serve per stampare direttamente tutti i menu di una lista, senza dover ciclarli manualmente in main
      * @param listaMenu è una lista che può essere quella tornata da menuPerTipologia() o da getListaMenu()
      */
-    public static void printMenuList(List<Menu> listaMenu) {
+    public static void printMenuList() {
         Integer iterazioni = 0;
         for (Menu menu : listaMenu) {
             System.out.println("Menu numero " + (iterazioni+1) + "\n");

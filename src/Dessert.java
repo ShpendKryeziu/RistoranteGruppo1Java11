@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Date;
 
 public class Dessert extends Portata {
     private Integer glycemicIndex;
@@ -42,9 +41,9 @@ public class Dessert extends Portata {
 
     @Override
     public void printInfo() {
-        System.out.print(getName() + " --- €" + getPrice() + "\n" + Main.ANSI_GREY + Main.ANSI_ITALIC + " allergeni = " + Main.ANSI_RESET);
+        System.out.print(getName() + " --- €" + getPrice() + "\n" + TextStyle.ANSI_GREY + TextStyle.ANSI_ITALIC + " allergeni = " + TextStyle.ANSI_RESET);
         for (AllergensEnum allergen : allergens) {
-            System.out.print(Main.ANSI_GREY + Main.ANSI_ITALIC + allergen.getName() + "; " + Main.ANSI_RESET);
+            System.out.print(TextStyle.ANSI_GREY.toString() + TextStyle.ANSI_ITALIC + allergen.getName() + "; " + TextStyle.ANSI_RESET);
         }
         System.out.println();
     }

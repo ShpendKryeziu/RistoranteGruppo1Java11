@@ -44,7 +44,7 @@ public class Menu {
      */
 
     public void printMenu() {
-        System.out.println(Main.ANSI_RED_BACKGROUND + Main.emoji_fire + Main.ANSI_BOLD + Main.ANSI_BLACK + getRestaurantName() + Main.emoji_fire + Main.ANSI_RESET + "\n");
+        System.out.println(TextStyle.ANSI_RED_BACKGROUND.toString() + TextStyle.EMOJY_FIRE + TextStyle.ANSI_BOLD + TextStyle.ANSI_BLACK + getRestaurantName() + TextStyle.EMOJY_FIRE + TextStyle.ANSI_RESET + "\n");
         System.out.println("Chef: " + getChefName() + "\n");
         System.out.println(getDescription() + "\n");
         System.out.println("\n PRIMI \n");

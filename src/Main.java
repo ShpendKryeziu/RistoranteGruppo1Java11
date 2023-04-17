@@ -71,8 +71,29 @@ public class Main {
         menuCompleto.addPortate(Arrays.asList(pappardelleAlRaguDiCinghiale,gnocchettiAlRisoNeroConCarpaccioDiVitelloCrudoEPeperoni, moussaka, ravioliDiPastaFrescaConRipienoDiVitelloCaprinoEMarsala,fagioliConCostineAffumicate,canederliAllaTirolese,tortelliniInBrodoDiCappone,ciorbaDiCapraTransilvana));
         menuCompleto.addPortate(Arrays.asList(cervelloFrittoDiCapraMontana,fegatelliDiAironeGrigioDeiBalcani,piottinoDiCinghialeNonSelvaticoAllaVodka,linguaDiYakBrasata,budiniDiSangueDiMaialeAllevatoAlloStatoBrado));
 
+        //TAVOLI
+        Tavolo tavolo1 = new Tavolo(1, 4, true,true,true);
+        Tavolo tavolo2 = new Tavolo(2, 4, true,true,true);
+        Tavolo tavolo3 = new Tavolo(3, 6, true,true,true);
+        Tavolo tavolo4 = new Tavolo(4, 6, true,true,true);
+        Tavolo tavolo5 = new Tavolo(5, 12, true,true,true);
+        ristoranteGruppo1.addTavolo(tavolo1);
+        ristoranteGruppo1.addTavolo(tavolo2);
+        ristoranteGruppo1.addTavolo(tavolo3);
+        ristoranteGruppo1.addTavolo(tavolo4);
+        ristoranteGruppo1.addTavolo(tavolo5);
+
+
         //menuCompleto.printMenu();
         ristoranteGruppo1.menuPerTipologia(TipologiaEnum.VEGANO);
         System.out.println("Prezzo Medio Menu Completo (NO BEVANDE) = " + menuCompleto.averagePrice() + " Euri");
+
+        //Prova prenotazione
+        Cliente alberto = new Cliente("Albilug", "Alberto", "Lugato", "333333", "Via Fasulla 13");
+        ristoranteGruppo1.prenotaTavolo(alberto, 4, Ristorante.fasciaOrariaENUM.FASCIA_ORARIA2);
+        /** da sistemare.
+         * Ritorniamo una lista / mappa prenotazioni?
+         * Metodo per vedere i tavoli prenotabili/liberi?
+         */
     }
 }

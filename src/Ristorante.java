@@ -6,6 +6,14 @@ import java.util.stream.Collectors;
 
 import Enum.*;
 
+/**
+ *  Classe Ristorante
+ *  È caratterizzato dai dati generali del ristorante.
+ *  Ogni ristorante ha una lista di menù, una mappa di Tavoli e una lista di Prenotazioni.
+ *  La classe possiede dei metodi per:
+ *  - stampare info sui Menu;
+ *  - metodo per prenotare;
+ */
 public class Ristorante {
     private String name;
     private String address;

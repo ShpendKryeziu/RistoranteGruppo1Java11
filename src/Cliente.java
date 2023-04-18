@@ -3,6 +3,10 @@ import Enum.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Classe Cliente.
+ * Ogni cliente ha i suoi dati personali, una lista prenotazioni e una lista ristoranti preferiti!
+ */
 public class Cliente {
 
     private String username;

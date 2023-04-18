@@ -101,9 +101,5 @@ public class Main {
         for (Prenotazione prenot : alberto.getListaPrenotazioni()) {
             prenot.printInfo();
         }
-        /** da sistemare.
-         * Ritorniamo una lista / mappa prenotazioni?
-         * Metodo per vedere i tavoli prenotabili/liberi?
-         */
     }
 }

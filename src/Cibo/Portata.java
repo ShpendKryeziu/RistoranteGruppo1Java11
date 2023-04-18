@@ -2,6 +2,10 @@ package Cibo;
 
 import Enum.*;
 
+/**
+ * Classe astratta Portata
+ * Viene estesa alle classi Bevanda, Primo, Secondo, Dessert.
+ */
 public abstract class Portata {
 
     private String name;
@@ -12,6 +16,7 @@ public abstract class Portata {
      *Imposta una portata che abbia un nome, un prezzo e una tipologia dietologica.
      * @param name
      * @param price
+     * @param portata
      */
 
     public Portata(String name, Double price, TipoPortataEnum portata) {

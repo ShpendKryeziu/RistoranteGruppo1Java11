@@ -5,6 +5,11 @@ import java.util.Collection;
 import java.util.List;
 import Enum.*;
 
+/**
+ * Classe Menu!
+ * Comprende nome del ristorante, Chef, una descrizione introduttiva, la tipologia di Menu, la lista delle portate.
+
+ */
 
 public class Menu {
     private String restaurantName;

@@ -4,16 +4,16 @@ import Enum.*;
 
 import java.util.ArrayList;
 
-//TODO java doc in sintesi per capire cos'è questa classe
-
+/**
+ * Classe Dessert.
+ * Serve per creare gli oggetti dessert!
+ */
 
 public class Dessert extends Portata {
     private Integer glycemicIndex;
     private boolean coloranti;
     private Integer calories;
     private ArrayList<AllergensEnum> allergens;
-
-
 
     /**
      * Crea un nuovo oggetto di tipo Cibo.Dessert

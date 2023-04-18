@@ -1,6 +1,11 @@
 package Cibo;
 
 import Enum.*;
+
+/**
+ * Classe Bevanda.
+ * Per dissetarsi.
+ */
 public class Bevanda extends Portata {
     private Double capacity;
     private boolean alcoholic;

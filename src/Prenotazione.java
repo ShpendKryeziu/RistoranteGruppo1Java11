@@ -1,3 +1,8 @@
+/**
+ * Prenotazione:
+ * classe comprendente i field cliente, ristorante, tavolo, numero di persone e fascia oraria.
+ * Gli oggetti prenotazione verranno utilizzati dai metodi per creare e gestire prenotazioni.
+ */
 public class Prenotazione {
     private Cliente cliente;
     private Ristorante ristorante;

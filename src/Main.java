@@ -95,8 +95,12 @@ public class Main {
         System.out.println("Prezzo Medio Menu Completo (NO BEVANDE) = " + menuCompleto.averagePrice() + " Euri");
 
         //Prova prenotazione
-        Cliente alberto = new Cliente("Albilug", "Alberto", "Lugato", "333333", "Via Fasulla 13");
-        ristoranteGruppo1.prenotaTavolo(alberto, 4, Ristorante.fasciaOrariaENUM.FASCIA_ORARIA2);
+        Cliente alberto = new Cliente("Albilug", "Alberto", "Lugato", "333333", "Mestre", "Via Fasulla 13");
+        alberto.addPreferito(ristoranteGruppo1);
+        ristoranteGruppo1.prenotaTavolo(alberto, 4, Ristorante.fasciaOrariaEnum.FASCIA_ORARIA2);
+        for (Prenotazione prenot : alberto.getListaPrenotazioni()) {
+            prenot.printInfo();
+        }
         /** da sistemare.
          * Ritorniamo una lista / mappa prenotazioni?
          * Metodo per vedere i tavoli prenotabili/liberi?

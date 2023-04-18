@@ -1,3 +1,4 @@
+import Enum.*;
 public class Tavolo {
     private Integer ID;
     private Integer capacity;
@@ -5,12 +6,12 @@ public class Tavolo {
     private Boolean disponibileFasciaOraria2;
     private Boolean disponibileFasciaOraria3;
 
-    Tavolo(Integer ID, Integer capacity, Boolean fasciaOraria1, Boolean fasciaOraria2, Boolean fasciaOraria3) {
+    Tavolo(Integer ID, Integer capacity) {
         this.ID = ID;
         this.capacity = capacity;
-        this.disponibileFasciaOraria1 = fasciaOraria1;
-        this.disponibileFasciaOraria2 = fasciaOraria2;
-        this.disponibileFasciaOraria3 = fasciaOraria3;
+        this.disponibileFasciaOraria1 = true;
+        this.disponibileFasciaOraria2 = true;
+        this.disponibileFasciaOraria3 = true;
     }
 
     public Integer getID() {return ID;}

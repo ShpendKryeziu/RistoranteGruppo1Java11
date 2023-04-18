@@ -1,3 +1,5 @@
+package Enum;
+
 public enum TipologiaEnum {
 
     CARNE("Carne", "contiene prodotti ricavati da carcasse animali"),

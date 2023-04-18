@@ -1,3 +1,7 @@
+package Cibo;
+
+import Enum.*;
+
 public abstract class Portata {
 
     private String name;

@@ -1,3 +1,6 @@
+package Cibo;
+
+import Enum.*;
 public class Bevanda extends Portata {
     private Double capacity;
     private boolean alcoholic;

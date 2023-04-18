@@ -1,3 +1,6 @@
+package Cibo;
+import Enum.*;
+
 import java.util.ArrayList;
 
 public class Primo extends Portata {

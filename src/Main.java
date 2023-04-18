@@ -1,3 +1,9 @@
+import Cibo.Bevanda;
+import Cibo.Dessert;
+import Cibo.Primo;
+import Cibo.Secondo;
+import Enum.*;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -24,12 +30,12 @@ public class Main {
 
         ArrayList<AllergensEnum> papardelleAllergens = new ArrayList<>(Arrays.asList(AllergensEnum.GLUTINE, AllergensEnum.LATTE));
         ArrayList<AllergensEnum> gnocchettiAllergens = new ArrayList<>(Arrays.asList(AllergensEnum.GLUTINE, AllergensEnum.LATTE, AllergensEnum.SEDANO, AllergensEnum.SENAPE));
-        ArrayList<AllergensEnum> moussakaAllergens = new ArrayList<>(Arrays.asList(AllergensEnum.LATTE,AllergensEnum.UOVA,AllergensEnum.GLUTINE, AllergensEnum.SESAMO,AllergensEnum.SENAPE));
-        ArrayList<AllergensEnum> ravioliAllergens = new ArrayList<>(Arrays.asList(AllergensEnum.GLUTINE, AllergensEnum.LATTE, AllergensEnum.UOVA,AllergensEnum.SENAPE));
-        ArrayList<AllergensEnum> fagioliAllergens = new ArrayList<>(Arrays.asList(AllergensEnum.SEDANO,AllergensEnum.SESAMO, AllergensEnum.SENAPE));
-        ArrayList<AllergensEnum> canederliAllergens = new ArrayList<>(Arrays.asList(AllergensEnum.GLUTINE,AllergensEnum.LATTE,AllergensEnum.UOVA,AllergensEnum.SESAMO,AllergensEnum.SENAPE));
-        ArrayList<AllergensEnum> tortelliniAllergens = new ArrayList<>(Arrays.asList(AllergensEnum.GLUTINE,AllergensEnum.UOVA,AllergensEnum.SENAPE,AllergensEnum.SEDANO,AllergensEnum.LUPINI,AllergensEnum.SESAMO));
-        ArrayList<AllergensEnum> ciorbaAllergens = new ArrayList<>(Arrays.asList(AllergensEnum.GLUTINE,AllergensEnum.LUPINI,AllergensEnum.UOVA,AllergensEnum.SENAPE,AllergensEnum.SESAMO));
+        ArrayList<AllergensEnum> moussakaAllergens = new ArrayList<>(Arrays.asList(AllergensEnum.LATTE, AllergensEnum.UOVA, AllergensEnum.GLUTINE, AllergensEnum.SESAMO, AllergensEnum.SENAPE));
+        ArrayList<AllergensEnum> ravioliAllergens = new ArrayList<>(Arrays.asList(AllergensEnum.GLUTINE, AllergensEnum.LATTE, AllergensEnum.UOVA, AllergensEnum.SENAPE));
+        ArrayList<AllergensEnum> fagioliAllergens = new ArrayList<>(Arrays.asList(AllergensEnum.SEDANO, AllergensEnum.SESAMO, AllergensEnum.SENAPE));
+        ArrayList<AllergensEnum> canederliAllergens = new ArrayList<>(Arrays.asList(AllergensEnum.GLUTINE, AllergensEnum.LATTE, AllergensEnum.UOVA, AllergensEnum.SESAMO, AllergensEnum.SENAPE));
+        ArrayList<AllergensEnum> tortelliniAllergens = new ArrayList<>(Arrays.asList(AllergensEnum.GLUTINE, AllergensEnum.UOVA, AllergensEnum.SENAPE, AllergensEnum.SEDANO, AllergensEnum.LUPINI, AllergensEnum.SESAMO));
+        ArrayList<AllergensEnum> ciorbaAllergens = new ArrayList<>(Arrays.asList(AllergensEnum.GLUTINE, AllergensEnum.LUPINI, AllergensEnum.UOVA, AllergensEnum.SENAPE, AllergensEnum.SESAMO));
         ArrayList<AllergensEnum> nocciolatoAllergens = new ArrayList<>(Arrays.asList(AllergensEnum.GLUTINE, AllergensEnum.ARACHIDI, AllergensEnum.FRUTTAGUSCIO));
         ArrayList<AllergensEnum> semifreddoAllergens = new ArrayList<>(Arrays.asList(AllergensEnum.LATTE));
         ArrayList<AllergensEnum> salameCioccolatoAllergens = new ArrayList<>(Arrays.asList(AllergensEnum.ARACHIDI, AllergensEnum.LATTE));
@@ -72,11 +78,11 @@ public class Main {
         menuCompleto.addPortate(Arrays.asList(cervelloFrittoDiCapraMontana,fegatelliDiAironeGrigioDeiBalcani,piottinoDiCinghialeNonSelvaticoAllaVodka,linguaDiYakBrasata,budiniDiSangueDiMaialeAllevatoAlloStatoBrado));
 
         //TAVOLI
-        Tavolo tavolo1 = new Tavolo(1, 4, true,true,true);
-        Tavolo tavolo2 = new Tavolo(2, 4, true,true,true);
-        Tavolo tavolo3 = new Tavolo(3, 6, true,true,true);
-        Tavolo tavolo4 = new Tavolo(4, 6, true,true,true);
-        Tavolo tavolo5 = new Tavolo(5, 12, true,true,true);
+        Tavolo tavolo1 = new Tavolo(1, 4);
+        Tavolo tavolo2 = new Tavolo(2, 4);
+        Tavolo tavolo3 = new Tavolo(3, 6);
+        Tavolo tavolo4 = new Tavolo(4, 6);
+        Tavolo tavolo5 = new Tavolo(5, 12);
         ristoranteGruppo1.addTavolo(tavolo1);
         ristoranteGruppo1.addTavolo(tavolo2);
         ristoranteGruppo1.addTavolo(tavolo3);

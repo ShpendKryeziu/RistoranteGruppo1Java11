@@ -1,3 +1,7 @@
+package Cibo;
+
+import Enum.*;
+
 public class Secondo extends Portata {
 
     //TODO sistamare

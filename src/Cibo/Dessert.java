@@ -1,3 +1,7 @@
+package Cibo;
+
+import Enum.*;
+
 import java.util.ArrayList;
 
 //TODO java doc in sintesi per capire cos'è questa classe
@@ -12,10 +16,10 @@ public class Dessert extends Portata {
 
 
     /**
-     * Crea un nuovo oggetto di tipo Dessert
-     * @param name il nome del Dessert
-     * @param price il costo del Dessert
-     * @param glycemicIndex l'indice glicemico di Dessert.
+     * Crea un nuovo oggetto di tipo Cibo.Dessert
+     * @param name il nome del Cibo.Dessert
+     * @param price il costo del Cibo.Dessert
+     * @param glycemicIndex l'indice glicemico di Cibo.Dessert.
      * @param coloranti presenza di coloranti.
      * @param calories numero di calorie.
      * @param allergens presenza di relativa lista di allergeni.

@@ -99,12 +99,13 @@ public class Ristorante {
         }
     }
 
-    public enum fasciaOrariaEnum {
+    //TODO portiamolo fuori
+    public enum FasciaOrariaEnum {
         FASCIA_ORARIA1("18.30 - 20.00"),
         FASCIA_ORARIA2("20.00 - 21.30"),
         FASCIA_ORARIA3("21.30 - 23.00");
         String fasciaOraria;
-        fasciaOrariaEnum(String fasciaOraria) {
+        FasciaOrariaEnum(String fasciaOraria) {
             this.fasciaOraria = fasciaOraria;
         }
         public String getFasciaOraria() {
@@ -120,16 +121,17 @@ public class Ristorante {
      * Ritorniamo una lista / mappa prenotazioni?
      * Metodo per vedere i tavoli prenotabili/liberi?
      */
-    public void prenotaTavolo(Cliente cliente, Integer numeroPersone, fasciaOrariaEnum fasciaOraria) {
+    public void prenotaTavolo(Cliente cliente, Integer numeroPersone, FasciaOrariaEnum fasciaOraria) {
         Tavolo tavoloPrenotato = null;
         for (Tavolo tavolo : mappaTavoli.values()) {
             if ((numeroPersone-1) > tavolo.getCapacity() &&
                 tavolo.getCapacity() < (numeroPersone+1)) {
                 tavoloPrenotato = tavolo;
                 switch (fasciaOraria) {
+                    //TODO riguardare con questa gestione
                     case FASCIA_ORARIA1:
-                        if (tavolo.getFasciaOraria1().equals(true)) {
-                            tavolo.setFasciaOraria1(false);
+                        if (tavolo.getFasciaOrariaEnums().contains(FasciaOrariaEnum.FASCIA_ORARIA1)) {
+                            tavolo.removeFascioOraria(FasciaOrariaEnum.FASCIA_ORARIA1);
                         }
                         break;
                     case FASCIA_ORARIA2:

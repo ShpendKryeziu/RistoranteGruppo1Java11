@@ -84,6 +84,7 @@ public class Cliente {
         return listaPrenotazioni;
     }
 
+    //TODO facciamo un metodo che stampa lo storico delle prenotazioni, possiamo dare un punteggio
     public void printInfo() {
         System.out.println("ID: " + username + ", " + name + surname);
     }

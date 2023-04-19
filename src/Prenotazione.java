@@ -8,10 +8,10 @@ public class Prenotazione {
     private Ristorante ristorante;
     private Tavolo tavolo;
     private Integer numeroDiPersone;
-    private Ristorante.fasciaOrariaEnum fasciaOraria;
+    private Ristorante.FasciaOrariaEnum fasciaOraria;
 
     public Prenotazione (Cliente cliente, Ristorante ristorante, Tavolo tavolo, Integer numeroDiPersone,
-        Ristorante.fasciaOrariaEnum fasciaOraria) {
+        Ristorante.FasciaOrariaEnum fasciaOraria) {
         this.cliente = cliente;
         this.ristorante = ristorante;
         this.tavolo = tavolo;
@@ -43,10 +43,10 @@ public class Prenotazione {
     public void setNumeroDiPersone(Integer numeroDiPersone) {
         this.numeroDiPersone = numeroDiPersone;
     }
-    public Ristorante.fasciaOrariaEnum getFasciaOraria() {
+    public Ristorante.FasciaOrariaEnum getFasciaOraria() {
         return fasciaOraria;
     }
-    public void setFasciaOraria(Ristorante.fasciaOrariaEnum fasciaOraria) {
+    public void setFasciaOraria(Ristorante.FasciaOrariaEnum fasciaOraria) {
         this.fasciaOraria = fasciaOraria;
     }
 

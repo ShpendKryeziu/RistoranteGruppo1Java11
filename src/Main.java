@@ -97,7 +97,7 @@ public class Main {
         //Prova prenotazione
         Cliente alberto = new Cliente("Albilug", "Alberto", "Lugato", "333333", "Mestre", "Via Fasulla 13");
         alberto.addPreferito(ristoranteGruppo1);
-        ristoranteGruppo1.prenotaTavolo(alberto, 4, Ristorante.fasciaOrariaEnum.FASCIA_ORARIA2);
+        ristoranteGruppo1.prenotaTavolo(alberto, 4, Ristorante.FasciaOrariaEnum.FASCIA_ORARIA2);
         for (Prenotazione prenot : alberto.getListaPrenotazioni()) {
             prenot.printInfo();
         }

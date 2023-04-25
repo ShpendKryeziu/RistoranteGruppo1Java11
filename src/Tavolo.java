@@ -1,5 +1,6 @@
 import Enum.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Tavolo {
@@ -12,17 +13,17 @@ public class Tavolo {
     private Boolean disponibileFasciaOraria1;
     private Boolean disponibileFasciaOraria2;
     private Boolean disponibileFasciaOraria3;
-
-    private List<Ristorante.FasciaOrariaEnum> fasciaOrariaEnums;
+    private List<FasciaOrariaEnum> fasceOrarie = new ArrayList<>();
 
     //TODO il modificatore di accesso
     Tavolo(Integer ID, Integer capacity) {
         this.ID = ID;
         this.capacity = capacity;
-        this.disponibileFasciaOraria1 = true;
-        this.disponibileFasciaOraria2 = true;
-        this.disponibileFasciaOraria3 = true;
     }
+
+    public void addFasciaOraria(FasciaOrariaEnum fasciaOrariaEnum){fasceOrarie.add(fasciaOrariaEnum);}
+    public void removeFasciaOraria(FasciaOrariaEnum fasciaOrariaEnum){fasceOrarie.remove(fasciaOrariaEnum);}
+
 
     public Integer getID() {
         return ID;
@@ -36,37 +37,7 @@ public class Tavolo {
     public void setCapacity(Integer capacity) {
         this.capacity = capacity;
     }
-    public Boolean getFasciaOraria1() {
-        return disponibileFasciaOraria1;
-    }
-    public void setFasciaOraria1(Boolean fasciaOraria1) {
-        this.disponibileFasciaOraria1 = fasciaOraria1;
-    }
-    public Boolean getFasciaOraria2() {
-        return disponibileFasciaOraria2;
-    }
-    public void setFasciaOraria2(Boolean fasciaOraria2) {
-        this.disponibileFasciaOraria2 = fasciaOraria2;
-    }
-    public Boolean getFasciaOraria3() {
-        return disponibileFasciaOraria3;
-    }
-    public void setFasciaOraria3(Boolean fasciaOraria3) {
-        this.disponibileFasciaOraria3 = fasciaOraria3;
-    }
-
-    public void addFasciaOraria(Ristorante.FasciaOrariaEnum fasciaOrariaEnum){
-
-        fasciaOrariaEnums.add(fasciaOrariaEnum);
-
-    }
-    public void removeFascioOraria(Ristorante.FasciaOrariaEnum fasciaOrariaEnum){
-
-        fasciaOrariaEnums.remove(fasciaOrariaEnum);
-
-    }
-
-    public List<Ristorante.FasciaOrariaEnum> getFasciaOrariaEnums() {
-        return fasciaOrariaEnums;
+    public List<FasciaOrariaEnum> getFasceOrarie() {
+        return fasceOrarie;
     }
 }

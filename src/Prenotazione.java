@@ -3,15 +3,17 @@
  * classe comprendente i field cliente, ristorante, tavolo, numero di persone e fascia oraria.
  * Gli oggetti prenotazione verranno utilizzati dai metodi per creare e gestire prenotazioni.
  */
+
+import Enum.*;
 public class Prenotazione {
     private Cliente cliente;
     private Ristorante ristorante;
     private Tavolo tavolo;
     private Integer numeroDiPersone;
-    private Ristorante.FasciaOrariaEnum fasciaOraria;
+    private FasciaOrariaEnum fasciaOraria;
 
     public Prenotazione (Cliente cliente, Ristorante ristorante, Tavolo tavolo, Integer numeroDiPersone,
-        Ristorante.FasciaOrariaEnum fasciaOraria) {
+        FasciaOrariaEnum fasciaOraria) {
         this.cliente = cliente;
         this.ristorante = ristorante;
         this.tavolo = tavolo;
@@ -43,15 +45,15 @@ public class Prenotazione {
     public void setNumeroDiPersone(Integer numeroDiPersone) {
         this.numeroDiPersone = numeroDiPersone;
     }
-    public Ristorante.FasciaOrariaEnum getFasciaOraria() {
+    public FasciaOrariaEnum getFasciaOraria() {
         return fasciaOraria;
     }
-    public void setFasciaOraria(Ristorante.FasciaOrariaEnum fasciaOraria) {
+    public void setFasciaOraria(FasciaOrariaEnum fasciaOraria) {
         this.fasciaOraria = fasciaOraria;
     }
 
     public void printInfo() {
-        System.out.println(cliente.getName() + " " + cliente.getSurname() + " prenota per " + numeroDiPersone + " in " + ristorante.getName() +
-                ", alle " + fasciaOraria.getFasciaOraria());
+        System.out.println(cliente.getName() + " " + cliente.getSurname() + " prenota per " + numeroDiPersone + " in "
+                + ristorante.getName() + ", alle " + fasciaOraria.getFasciaOraria());
     }
 }

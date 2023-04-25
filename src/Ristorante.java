@@ -7,12 +7,12 @@ import java.util.stream.Collectors;
 import Enum.*;
 
 /**
- *  Classe Ristorante
- *  È caratterizzato dai dati generali del ristorante.
- *  Ogni ristorante ha una lista di menù, una mappa di Tavoli e una lista di Prenotazioni.
- *  La classe possiede dei metodi per:
- *  - stampare info sui Menu;
- *  - metodo per prenotare;
+ * Classe Ristorante
+ * È caratterizzato dai dati generali del ristorante.
+ * Ogni ristorante ha una lista di menù, una mappa di Tavoli e una lista di Prenotazioni.
+ * La classe possiede dei metodi per:
+ * - stampare info sui Menu;
+ * - metodo per prenotare;
  */
 public class Ristorante {
     private String name;
@@ -33,36 +33,47 @@ public class Ristorante {
     public String getName() {
         return name;
     }
+
     public void setName(String name) {
         this.name = name;
     }
+
     public String getAddress() {
         return address;
     }
+
     public void setAddress(String address) {
         this.address = address;
     }
+
     public List<Menu> getListaMenu() {
         return listaMenu;
     }
+
     public Double getRating() {
         return rating;
     }
+
     public void setRating(Double rating) {
         this.rating = rating;
     }
+
     public void addMenu(Menu menu) {
         listaMenu.add(menu);
     }
+
     public void removeMenu(Menu menu) {
         listaMenu.remove(menu);
     }
+
     public void addTavolo(Tavolo tavolo) {
         mappaTavoli.put(tavolo.getID(), tavolo);
     }
+
     public void removeTavolo(Tavolo tavolo) {
         mappaTavoli.put(tavolo.getID(), tavolo);
     }
+
     public List<Prenotazione> getListaPrenotazioni() {
         return listaPrenotazioni;
     }
@@ -100,21 +111,7 @@ public class Ristorante {
     }
 
     //TODO portiamolo fuori
-    public enum FasciaOrariaEnum {
-        FASCIA_ORARIA1("18.30 - 20.00"),
-        FASCIA_ORARIA2("20.00 - 21.30"),
-        FASCIA_ORARIA3("21.30 - 23.00");
-        String fasciaOraria;
-        FasciaOrariaEnum(String fasciaOraria) {
-            this.fasciaOraria = fasciaOraria;
-        }
-        public String getFasciaOraria() {
-            return fasciaOraria;
-        }
-        public void setFasciaOraria(String fasciaOraria) {
-            this.fasciaOraria = fasciaOraria;
-        }
-    }
+
 
     /**
      * da sistemare.
@@ -122,39 +119,27 @@ public class Ristorante {
      * Metodo per vedere i tavoli prenotabili/liberi?
      */
     public void prenotaTavolo(Cliente cliente, Integer numeroPersone, FasciaOrariaEnum fasciaOraria) {
-        Tavolo tavoloPrenotato = null;
+        boolean tavoloPrenotato = false; //metto false per poter poi uscire dal ciclo
         for (Tavolo tavolo : mappaTavoli.values()) {
-            if ((numeroPersone-1) > tavolo.getCapacity() &&
-                tavolo.getCapacity() < (numeroPersone+1)) {
-                tavoloPrenotato = tavolo;
-                switch (fasciaOraria) {
-                    //TODO riguardare con questa gestione
-                    case FASCIA_ORARIA1:
-                        if (tavolo.getFasciaOrariaEnums().contains(FasciaOrariaEnum.FASCIA_ORARIA1)) {
-                            tavolo.removeFascioOraria(FasciaOrariaEnum.FASCIA_ORARIA1);
-                        }
-                        break;
-                    case FASCIA_ORARIA2:
-                        if (tavolo.getFasciaOraria2().equals(true)) {
-                            tavolo.setFasciaOraria2(false);
-                        }
-                        break;
-                    case FASCIA_ORARIA3:
-                        if (tavolo.getFasciaOraria3().equals(true)) {
-                            tavolo.setFasciaOraria3(false);
-                        }
-                        break;
-                    default : {
-                        System.out.println("Non ci sono tavoli disponibili in questa fascia oraria." + "\n" +
-                                "Si prega di riprovare.");
-                    }
-                }
+            boolean conditionCapacity = ((numeroPersone - 1) > tavolo.getCapacity() && tavolo.getCapacity() < (numeroPersone + 1));
+            boolean conditionFasciaOraria = tavolo.getFasceOrarie().contains(fasciaOraria);
+            boolean conditionPrenotazione = conditionCapacity && conditionFasciaOraria;
+
+            if (conditionPrenotazione) {
+                Prenotazione prenotazione = new Prenotazione(cliente, this, tavolo, numeroPersone, fasciaOraria);
+                cliente.addPrenotazione(prenotazione);
+                listaPrenotazioni.add(prenotazione);
+                System.out.println(cliente.getName() + " " + cliente.getSurname() + " ha prenotato per " + numeroPersone
+                        + " al tavolo " + tavolo.getID());
+                tavoloPrenotato = true; //setta come vero ed esce dal ciclo
+                tavolo.removeFasciaOraria(fasciaOraria);
+                break;
             }
         }
-        Prenotazione prenotazione = new Prenotazione(cliente, this, tavoloPrenotato, numeroPersone, fasciaOraria);
-        cliente.addPrenotazione(prenotazione);
-        listaPrenotazioni.add(prenotazione);
-        System.out.println(cliente.getName() + " " + cliente.getSurname() + " ha prenotato per " + numeroPersone
-                + " al tavolo " + tavoloPrenotato.getID());
+        //se a fine del ciclo tavoloPrenotato=false... allora stampa.
+        if (tavoloPrenotato = false) {
+            System.out.println("Non ci sono tavoli disponibili in questa fascia oraria." + "\n" +
+                    "Si prega di riprovare.");
+        }
     }
 }

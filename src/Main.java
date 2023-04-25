@@ -83,21 +83,29 @@ public class Main {
         Tavolo tavolo3 = new Tavolo(3, 6);
         Tavolo tavolo4 = new Tavolo(4, 6);
         Tavolo tavolo5 = new Tavolo(5, 12);
+
+        //aggiungo fasce orarie a tavolo prova
+        tavolo1.addFasciaOraria(FasciaOrariaEnum.FASCIA_ORARIA1);
+        tavolo1.addFasciaOraria(FasciaOrariaEnum.FASCIA_ORARIA2);
+        tavolo1.addFasciaOraria(FasciaOrariaEnum.FASCIA_ORARIA3);
+
         ristoranteGruppo1.addTavolo(tavolo1);
         ristoranteGruppo1.addTavolo(tavolo2);
         ristoranteGruppo1.addTavolo(tavolo3);
         ristoranteGruppo1.addTavolo(tavolo4);
         ristoranteGruppo1.addTavolo(tavolo5);
 
+        System.out.println(tavolo1.getCapacity() + " " + tavolo1.getFasceOrarie());
 
         //menuCompleto.printMenu();
         ristoranteGruppo1.menuPerTipologia(TipologiaEnum.VEGANO);
         System.out.println("Prezzo Medio Menu Completo (NO BEVANDE) = " + menuCompleto.averagePrice() + " Euri");
 
         //Prova prenotazione
-        Cliente alberto = new Cliente("Albilug", "Alberto", "Lugato", "333333", "Mestre", "Via Fasulla 13");
+        Cliente alberto = new Cliente("Albilug", "Alberto", "Lugato", "333333",
+                "Mestre", "Via Fasulla 13");
         alberto.addPreferito(ristoranteGruppo1);
-        ristoranteGruppo1.prenotaTavolo(alberto, 4, Ristorante.FasciaOrariaEnum.FASCIA_ORARIA2);
+        ristoranteGruppo1.prenotaTavolo(alberto, 4, FasciaOrariaEnum.FASCIA_ORARIA2);
         for (Prenotazione prenot : alberto.getListaPrenotazioni()) {
             prenot.printInfo();
         }

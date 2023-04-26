@@ -18,9 +18,9 @@ public class Ristorante {
     private String name;
     private String address;
     private Double rating;
-    private final List<Menu> listaMenu;
-    private final Map<Integer, Tavolo> mappaTavoli;
-    private final List<Prenotazione> listaPrenotazioni;
+    private List<Menu> listaMenu;
+    private Map<Integer, Tavolo> mappaTavoli;
+    private List<Prenotazione> listaPrenotazioni;
 
     public Ristorante(String name, String address) {
         this.name = name;
@@ -138,6 +138,12 @@ public class Ristorante {
         if (tavoloPrenotato = false) {
             System.out.println("Non ci sono tavoli disponibili in questa fascia oraria." + "\n" +
                     "Si prega di riprovare.");
+        }
+    }
+
+    public void printPrenotazioni() {
+        for (Prenotazione prenotazione : listaPrenotazioni) {
+            prenotazione.printInfo();
         }
     }
 }

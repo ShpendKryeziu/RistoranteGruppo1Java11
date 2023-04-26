@@ -82,8 +82,17 @@ public class Cliente {
         return listaPrenotazioni;
     }
 
-    //TODO facciamo un metodo che stampa lo storico delle prenotazioni, possiamo dare un punteggio
     public void printInfo() {
         System.out.println("ID: " + username + ", " + name + surname);
+    }
+
+    public void printPrenotazioni() {
+        for (Prenotazione prenotazione : listaPrenotazioni) {
+            prenotazione.printInfo();
+        }
+    }
+
+    public Integer getPunteggioPerRistorante(Ristorante r) {
+        return listaPrenotazioni.stream().filter(p -> p.getRistorante() == r).mapToInt(Prenotazione::getNumeroDiPersone).sum();
     }
 }

@@ -11,7 +11,4 @@ public enum FasciaOrariaEnum {
         public String getFasciaOraria() {
             return fasciaOraria;
         }
-        public void setFasciaOraria(String fasciaOraria) {
-            this.fasciaOraria = fasciaOraria;
-        }
 }

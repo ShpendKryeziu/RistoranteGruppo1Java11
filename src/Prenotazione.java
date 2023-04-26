@@ -4,7 +4,7 @@
  * Gli oggetti prenotazione verranno utilizzati dai metodi per creare e gestire prenotazioni.
  */
 
-import Enum.*;
+import enumerators.*;
 public class Prenotazione {
     private Cliente cliente;
     private Ristorante ristorante;

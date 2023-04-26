@@ -1,4 +1,4 @@
-package Enum;
+package enumerators;
 
 /**
  * Questa classe è di utility per un rapido accesso ai modificatori di stile del testo.

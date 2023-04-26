@@ -1,4 +1,4 @@
-package Enum;
+package enumerators;
 
 public enum FasciaOrariaEnum {
         FASCIA_ORARIA1("18.30 - 20.00"),

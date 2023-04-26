@@ -1,6 +1,6 @@
-package Cibo;
+package portate;
 
-import Enum.*;
+import enumerators.*;
 
 public class Secondo extends Portata {
 

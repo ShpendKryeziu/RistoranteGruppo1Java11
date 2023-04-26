@@ -1,8 +1,8 @@
-import Cibo.Bevanda;
-import Cibo.Dessert;
-import Cibo.Primo;
-import Cibo.Secondo;
-import Enum.*;
+import portate.Bevanda;
+import portate.Dessert;
+import portate.Primo;
+import portate.Secondo;
+import enumerators.*;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -106,7 +106,7 @@ public class Main {
                 "Mestre", "Via Fasulla 13");
         alberto.addPreferito(ristoranteGruppo1);
         ristoranteGruppo1.prenotaTavolo(alberto, 4, FasciaOrariaEnum.FASCIA_ORARIA2);
-        for (Prenotazione prenot : alberto.getListaPrenotazioni()) {
+        for (Prenotazione prenot : ristoranteGruppo1.getListaPrenotazioni()) {
             prenot.printInfo();
         }
     }

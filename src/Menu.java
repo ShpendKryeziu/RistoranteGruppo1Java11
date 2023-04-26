@@ -1,9 +1,9 @@
-import Cibo.Portata;
+import portate.Portata;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-import Enum.*;
+import enumerators.*;
 
 /**
  * Classe Menu!

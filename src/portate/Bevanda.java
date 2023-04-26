@@ -1,6 +1,6 @@
-package Cibo;
+package portate;
 
-import Enum.*;
+import enumerators.*;
 
 /**
  * Classe Bevanda.
@@ -28,7 +28,6 @@ public class Bevanda extends Portata {
     public void setCapacity(Double capacity) { this.capacity = capacity; }
     public boolean getAlcoholic() { return alcoholic; }
     public void setAlcoholic(boolean alcoholic) { this.alcoholic = alcoholic; }
-
 
     /**
      * Stampa la descrizione della bevanda come nella classe padre, ma con aggiunta la quantità in Litri.

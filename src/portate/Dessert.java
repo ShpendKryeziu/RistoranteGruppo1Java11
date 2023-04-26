@@ -1,6 +1,6 @@
-package Cibo;
+package portate;
 
-import Enum.*;
+import enumerators.*;
 
 import java.util.ArrayList;
 
@@ -43,8 +43,6 @@ public class Dessert extends Portata {
     public Integer getCalories() {return calories;}
     public void setCalories(Integer calories) {this.calories = calories;}
 
-
-//TODO java doc
 
     @Override
     public void printInfo() {

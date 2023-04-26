@@ -1,4 +1,4 @@
-package Enum;
+package enumerators;
 
 public enum AllergensEnum {
 

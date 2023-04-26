@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-import Enum.*;
+import enumerators.*;
 
 /**
  * Classe Ristorante
@@ -67,11 +67,11 @@ public class Ristorante {
     }
 
     public void addTavolo(Tavolo tavolo) {
-        mappaTavoli.put(tavolo.getID(), tavolo);
+        mappaTavoli.put(tavolo.getId(), tavolo);
     }
 
     public void removeTavolo(Tavolo tavolo) {
-        mappaTavoli.put(tavolo.getID(), tavolo);
+        mappaTavoli.put(tavolo.getId(), tavolo);
     }
 
     public List<Prenotazione> getListaPrenotazioni() {
@@ -110,9 +110,6 @@ public class Ristorante {
         }
     }
 
-    //TODO portiamolo fuori
-
-
     /**
      * da sistemare.
      * Ritorniamo una lista / mappa prenotazioni?
@@ -121,7 +118,7 @@ public class Ristorante {
     public void prenotaTavolo(Cliente cliente, Integer numeroPersone, FasciaOrariaEnum fasciaOraria) {
         boolean tavoloPrenotato = false; //metto false per poter poi uscire dal ciclo
         for (Tavolo tavolo : mappaTavoli.values()) {
-            boolean conditionCapacity = ((numeroPersone - 1) > tavolo.getCapacity() && tavolo.getCapacity() < (numeroPersone + 1));
+            boolean conditionCapacity = (tavolo.getCapacity() > numeroPersone-1 && tavolo.getCapacity() < numeroPersone+1);
             boolean conditionFasciaOraria = tavolo.getFasceOrarie().contains(fasciaOraria);
             boolean conditionPrenotazione = conditionCapacity && conditionFasciaOraria;
 
@@ -130,9 +127,10 @@ public class Ristorante {
                 cliente.addPrenotazione(prenotazione);
                 listaPrenotazioni.add(prenotazione);
                 System.out.println(cliente.getName() + " " + cliente.getSurname() + " ha prenotato per " + numeroPersone
-                        + " al tavolo " + tavolo.getID());
+                        + " al tavolo " + tavolo.getId());
                 tavoloPrenotato = true; //setta come vero ed esce dal ciclo
                 tavolo.removeFasciaOraria(fasciaOraria);
+                System.out.println("Prenotazione effettuata!");
                 break;
             }
         }

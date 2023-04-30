@@ -4,11 +4,14 @@ import enumerators.*;
 import java.util.ArrayList;
 
 public class Primo extends Portata {
-
+    /**
+     * Classe Primo
+     * Serve per creare gli oggetti di tipo primo!
+     */
     private ArrayList<AllergensEnum> allergens;
 
     /**
-     * Crea un nuovo oggetto di tipo primo
+     * Crea un nuovo oggetto di tipo Cibo.Primo
      *
      * @param name      il nome del primo
      * @param price     il costo del primo

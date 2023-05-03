@@ -116,28 +116,28 @@ public class Ristorante {
      * Metodo per vedere i tavoli prenotabili/liberi?
      */
     public void prenotaTavolo(Cliente cliente, Integer numeroPersone, FasciaOrariaEnum fasciaOraria) {
-        boolean tavoloPrenotato = false; //metto false per poter poi uscire dal ciclo
+        Integer sizeListaPrenotazione = listaPrenotazioni.size(); //metto false per poter poi uscire dal ciclo
         for (Tavolo tavolo : mappaTavoli.values()) {
             boolean conditionCapacity = (tavolo.getCapacity() > numeroPersone-1 && tavolo.getCapacity() < numeroPersone+1);
             boolean conditionFasciaOraria = tavolo.getFasceOrarie().contains(fasciaOraria);
-            boolean conditionPrenotazione = conditionCapacity && conditionFasciaOraria;
 
-            if (conditionPrenotazione) {
+            if (conditionCapacity && conditionFasciaOraria) {
                 Prenotazione prenotazione = new Prenotazione(cliente, this, tavolo, numeroPersone, fasciaOraria);
                 cliente.addPrenotazione(prenotazione);
                 listaPrenotazioni.add(prenotazione);
                 System.out.println(cliente.getName() + " " + cliente.getSurname() + " ha prenotato per " + numeroPersone
                         + " al tavolo " + tavolo.getId());
-                tavoloPrenotato = true; //setta come vero ed esce dal ciclo
                 tavolo.removeFasciaOraria(fasciaOraria);
                 System.out.println("Prenotazione effettuata!");
                 break;
             }
         }
-        //se a fine del ciclo tavoloPrenotato=false... allora stampa.
-        if (tavoloPrenotato = false) {
+        //TODO
+        if(listaPrenotazioni.size() > sizeListaPrenotazione){
             System.out.println("Non ci sono tavoli disponibili in questa fascia oraria." + "\n" +
                     "Si prega di riprovare.");
         }
     }
+
+
 }

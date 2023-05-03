@@ -104,8 +104,11 @@ public class Main {
         //Prova prenotazione
         Cliente alberto = new Cliente("Albilug", "Alberto", "Lugato", "333333",
                 "Mestre", "Via Fasulla 13");
+        //TODO questo caso può essere inizializzato anche nel costruttore
         alberto.addPreferito(ristoranteGruppo1);
         ristoranteGruppo1.prenotaTavolo(alberto, 4, FasciaOrariaEnum.FASCIA_ORARIA2);
+
+        //TODO inserire questa funzionalità all'interno di ristorante
         for (Prenotazione prenot : ristoranteGruppo1.getListaPrenotazioni()) {
             prenot.printInfo();
         }

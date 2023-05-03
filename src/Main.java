@@ -112,5 +112,7 @@ public class Main {
         for (Prenotazione prenot : ristoranteGruppo1.getListaPrenotazioni()) {
             prenot.printInfo();
         }
+
+        System.out.println(alberto.getPunteggioPerRistorante(ristoranteGruppo1));
     }
 }

@@ -18,9 +18,9 @@ public class Ristorante {
     private String name;
     private String address;
     private Double rating;
-    private final List<Menu> listaMenu;
-    private final Map<Integer, Tavolo> mappaTavoli;
-    private final List<Prenotazione> listaPrenotazioni;
+    private List<Menu> listaMenu;
+    private Map<Integer, Tavolo> mappaTavoli;
+    private List<Prenotazione> listaPrenotazioni;
 
     public Ristorante(String name, String address) {
         this.name = name;
@@ -116,28 +116,34 @@ public class Ristorante {
      * Metodo per vedere i tavoli prenotabili/liberi?
      */
     public void prenotaTavolo(Cliente cliente, Integer numeroPersone, FasciaOrariaEnum fasciaOraria) {
-        Integer sizeListaPrenotazione = listaPrenotazioni.size(); //metto false per poter poi uscire dal ciclo
+        boolean tavoloPrenotato = false; //metto false per poter poi uscire dal ciclo
         for (Tavolo tavolo : mappaTavoli.values()) {
             boolean conditionCapacity = (tavolo.getCapacity() > numeroPersone-1 && tavolo.getCapacity() < numeroPersone+1);
             boolean conditionFasciaOraria = tavolo.getFasceOrarie().contains(fasciaOraria);
+            boolean conditionPrenotazione = conditionCapacity && conditionFasciaOraria;
 
-            if (conditionCapacity && conditionFasciaOraria) {
+            if (conditionPrenotazione) {
                 Prenotazione prenotazione = new Prenotazione(cliente, this, tavolo, numeroPersone, fasciaOraria);
                 cliente.addPrenotazione(prenotazione);
                 listaPrenotazioni.add(prenotazione);
                 System.out.println(cliente.getName() + " " + cliente.getSurname() + " ha prenotato per " + numeroPersone
                         + " al tavolo " + tavolo.getId());
+                tavoloPrenotato = true; //setta come vero ed esce dal ciclo
                 tavolo.removeFasciaOraria(fasciaOraria);
                 System.out.println("Prenotazione effettuata!");
                 break;
             }
         }
-        //TODO
-        if(listaPrenotazioni.size() > sizeListaPrenotazione){
+        //se a fine del ciclo tavoloPrenotato=false... allora stampa.
+        if (tavoloPrenotato = false) {
             System.out.println("Non ci sono tavoli disponibili in questa fascia oraria." + "\n" +
                     "Si prega di riprovare.");
         }
     }
 
-
+    public void printPrenotazioni() {
+        for (Prenotazione prenotazione : listaPrenotazioni) {
+            prenotazione.printInfo();
+        }
+    }
 }

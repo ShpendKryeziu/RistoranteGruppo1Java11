@@ -13,8 +13,8 @@ public class Cliente {
     private String numeroDiTelefono;
     private String city;
     private String address;
-    private final List<Ristorante> ristorantiPreferiti;
-    private final List<Prenotazione> listaPrenotazioni;
+    private List<Ristorante> ristorantiPreferiti;
+    private List<Prenotazione> listaPrenotazioni;
 
     public Cliente(String username, String name, String surname, String numero, String city, String address) {
         this.username = username;

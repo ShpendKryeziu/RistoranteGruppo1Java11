@@ -114,5 +114,7 @@ public class Main {
         }
 
         System.out.println(alberto.getPunteggioPerRistorante(ristoranteGruppo1));
+
+        ristoranteGruppo1.menuPerTipologia(TipologiaEnum.CARNE);
     }
 }

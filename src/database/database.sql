@@ -47,7 +47,31 @@ create table if not exists drink (
 	alcoholic boolean
 );
 
-insert into bevande(name,price,capacity,alcoholic)
+create table if not exists first (
+    first_id int auto_increment not null primary key,
+    name varchar(255) not null,
+    price double not null,
+    allergens varchar(255) not null
+);
+
+create table if not exists second (
+    second_id int auto_increment not null primary key,
+    name varchar(255) not null,
+    price double not null
+);
+
+create table if not exists dessert (
+    dessert_id int auto_increment not null primary key,
+    name varchar(255) not null,
+    price double not null,
+    glycemicIndex int not null,
+    colourants boolean not null,
+    calories int not null,
+    allergens varchar(255) not null
+);
+
+
+insert into drink(name,price,capacity,alcoholic)
 values('Pepsi',3.5,0.33,false),
 ('Ruou thuoc',5.5,0.02,true),
 ('Cabernet 2017',2.5,0.15,true),
@@ -60,3 +84,28 @@ values('Pepsi',3.5,0.33,false),
 ('Jägermeister',4.0,0.02,true),
 ('Leffe 0.4',5.5,0.4,true),
 ('Baileys',3.5,0.05,true);
+
+insert into first(name,price,allergens)
+values(`Pappardelle al ragù di Cinghiale`,6.50,`glutine, latte`),
+(`Gnocchetti al riso nero con carpaccio di Vitello crudo e peperoni`,7.5,`glutine latte sedano senape`),
+(`Moussaka`,6.5,`latte uova glutine sesamo senape`),
+(`Ravioli di pasta fresca con ripieno di Vitello, caprino e marsala`,11.0,`glutine latte uova senape`),
+(`Fagioli con costine affumicate`,7.5,`sedano sesamo senape`),
+(`Canederli alla tirolese`,9.5,`glutine latte uova sesamo senape`),
+(`Tortellini in brodo di Cappone`,12.0,`glutine uova senape sedano lupini sesamo`),
+(`Ciorba di Capra transilvana`,10.0,`glutine lupini uova senape sesamo`);
+
+insert into second(name,price)
+values(`Cervello fritto di Capra montana`,12.5),
+(`Fegatelli di Airone grigio dei Balcani`,11.5),
+(`Piottino di Cinghiale non selvatico alla vodka`,9.5),
+(`Lingua di Yak brasata`,16.8),
+(`Budini di sangue di Maiale allevato allo stato brado`,18.0);
+
+insert into dessert(name,price,allergens)
+values(`Nocciolato Caramellato`,4.0,`glutine arachidi frutta a guscio`),
+(`Semifreddo al Limone`,5.5,`latte`),
+(`Salame al cioccolato con bacche`,7.0,`arachidi latte`),
+(`Panna fatta in casa con Mirtilli e Lamponi`,13.0,`latte`),
+(`Crema Catalana`,8.0,`latte`),
+(`Zucchero filato`,14.0,`frutta a guscio`);

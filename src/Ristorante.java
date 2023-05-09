@@ -13,6 +13,9 @@ import enumerators.*;
  * La classe possiede dei metodi per:
  * - stampare info sui Menu;
  * - metodo per prenotare;
+ *
+ * METODO prenotaTAVOLO
+ *
  */
 public class Ristorante {
     private String name;
@@ -111,9 +114,7 @@ public class Ristorante {
     }
 
     /**
-     * da sistemare.
-     * Ritorniamo una lista / mappa prenotazioni?
-     * Metodo per vedere i tavoli prenotabili/liberi?
+     *
      */
     public void prenotaTavolo(Cliente cliente, Integer numeroPersone, FasciaOrariaEnum fasciaOraria) {
         boolean tavoloPrenotato = false; //metto false per poter poi uscire dal ciclo

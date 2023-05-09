@@ -36,7 +36,7 @@ create table if not exists reservation (
     time_of_reservation timestamp,
     username varchar(255) foreign key references client(username),
     restaurant_id int foreign key references restaurant(restaurant_id),
-    table_id int foreign key references tables(table_id)
+    table_id int auto_increment foreign key references tables(table_id)
 );
 
 create table if not exists drink (
@@ -50,8 +50,7 @@ create table if not exists drink (
 create table if not exists first (
     first_id int auto_increment not null primary key,
     name varchar(255) not null,
-    price double not null,
-    allergens varchar(255) not null
+    price double not null
 );
 
 create table if not exists second (
@@ -64,12 +63,15 @@ create table if not exists dessert (
     dessert_id int auto_increment not null primary key,
     name varchar(255) not null,
     price double not null,
-    glycemicIndex int not null,
-    colourants boolean not null,
-    calories int not null,
-    allergens varchar(255) not null
+    glycemicIndex int,
+    colourants boolean,
+    calories int
 );
 
+create table if not exists allergens (
+    allergens_id int auto_increment not null primary key,
+    name varchar(25) not null
+);
 
 insert into drink(name,price,capacity,alcoholic)
 values('Pepsi',3.5,0.33,false),
@@ -85,27 +87,27 @@ values('Pepsi',3.5,0.33,false),
 ('Leffe 0.4',5.5,0.4,true),
 ('Baileys',3.5,0.05,true);
 
-insert into first(name,price,allergens)
-values(`Pappardelle al ragù di Cinghiale`,6.50,`glutine, latte`),
-(`Gnocchetti al riso nero con carpaccio di Vitello crudo e peperoni`,7.5,`glutine latte sedano senape`),
-(`Moussaka`,6.5,`latte uova glutine sesamo senape`),
-(`Ravioli di pasta fresca con ripieno di Vitello, caprino e marsala`,11.0,`glutine latte uova senape`),
-(`Fagioli con costine affumicate`,7.5,`sedano sesamo senape`),
-(`Canederli alla tirolese`,9.5,`glutine latte uova sesamo senape`),
-(`Tortellini in brodo di Cappone`,12.0,`glutine uova senape sedano lupini sesamo`),
-(`Ciorba di Capra transilvana`,10.0,`glutine lupini uova senape sesamo`);
+insert into first(name,price)
+values('Pappardelle al ragù di Cinghiale',6.50),
+('Gnocchetti al riso nero con carpaccio di Vitello crudo e peperoni',7.5),
+('Moussaka',6.5),
+('Ravioli di pasta fresca con ripieno di Vitello, caprino e marsala',11.0),
+('Fagioli con costine affumicate',7.5),
+('Canederli alla tirolese',9.5),
+('Tortellini in brodo di Cappone',12.0),
+('Ciorba di Capra transilvana',10.0);
 
 insert into second(name,price)
-values(`Cervello fritto di Capra montana`,12.5),
-(`Fegatelli di Airone grigio dei Balcani`,11.5),
-(`Piottino di Cinghiale non selvatico alla vodka`,9.5),
-(`Lingua di Yak brasata`,16.8),
-(`Budini di sangue di Maiale allevato allo stato brado`,18.0);
+values('Cervello fritto di Capra montana',12.5),
+('Fegatelli di Airone grigio dei Balcani',11.5),
+('Piottino di Cinghiale non selvatico alla vodka',9.5),
+('Lingua di Yak brasata',16.8),
+('Budini di sangue di Maiale allevato allo stato brado',18.0);
 
-insert into dessert(name,price,allergens)
-values(`Nocciolato Caramellato`,4.0,`glutine arachidi frutta a guscio`),
-(`Semifreddo al Limone`,5.5,`latte`),
-(`Salame al cioccolato con bacche`,7.0,`arachidi latte`),
-(`Panna fatta in casa con Mirtilli e Lamponi`,13.0,`latte`),
-(`Crema Catalana`,8.0,`latte`),
-(`Zucchero filato`,14.0,`frutta a guscio`);
+insert into dessert(name,price)
+values('Nocciolato Caramellato',4.0),
+('Semifreddo al Limone',5.5),
+('Salame al cioccolato con bacche',7.0),
+('Panna fatta in casa con Mirtilli e Lamponi',13.0),
+('Crema Catalana',8.0),
+('Zucchero filato',14.0);

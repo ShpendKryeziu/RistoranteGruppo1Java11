@@ -3,7 +3,7 @@ quindi ogni persona che inizierà a lavorare lancerà questo script per avere la
 
 ---------------------------------------------------------------------
 create table if not exists restaurant (
-    restaurant_id int auto_increment not null primary key,
+    id int auto_increment not null primary key,
     name varchar(255),
     address varchar(255),
     rating double
@@ -18,58 +18,63 @@ create table if not exists client (
 );
 
 create table if not exists tables (
-    table_id int auto_increment not null primary key,
+    id int auto_increment not null primary key,
     seats int,
-    restaurant_id int foreign key references restaurant(restaurant_id)
+    restaurant_id int foreign key references restaurant(id)
 );
 
 create table if not exists menu (
     chef varchar(255),
     description varchar(255),
     type varchar(255),
-    menu_id int auto_increment not null primary key,
-    restaurant_id int foreign key references restaurant(restaurant_id)
+    id int auto_increment not null primary key,
+    restaurant_id int foreign key references restaurant(id)
 );
 
 create table if not exists reservation (
+    id int auto_increment not null primary key,
     seats int not null,
     time_of_reservation timestamp,
     username varchar(255) foreign key references client(username),
-    restaurant_id int foreign key references restaurant(restaurant_id),
-    table_id int auto_increment foreign key references tables(table_id)
+    restaurant_id int foreign key references restaurant(id),
+    table_id int foreign key references tables(id)
 );
 
 create table if not exists drink (
-	drink_id int auto_increment not null primary key,
+	id int auto_increment not null primary key,
 	name varchar(255),
 	price double,
 	capacity double,
-	alcoholic boolean
+	alcoholic boolean,
+	menu_id int foreign key references menu(id)
 );
 
 create table if not exists first (
-    first_id int auto_increment not null primary key,
+    id int auto_increment not null primary key,
     name varchar(255) not null,
-    price double not null
+    price double not null,
+    menu_id int foreign key references menu(id)
 );
 
 create table if not exists second (
-    second_id int auto_increment not null primary key,
+    id int auto_increment not null primary key,
     name varchar(255) not null,
-    price double not null
+    price double not null,
+    menu_id int foreign key references menu(id)
 );
 
 create table if not exists dessert (
-    dessert_id int auto_increment not null primary key,
+    id int auto_increment not null primary key,
     name varchar(255) not null,
     price double not null,
     glycemicIndex int,
     colourants boolean,
-    calories int
+    calories int,
+    menu_id int foreign key references menu(id)
 );
 
 create table if not exists allergens (
-    allergens_id int auto_increment not null primary key,
+    id int auto_increment not null primary key,
     name varchar(25) not null
 );
 

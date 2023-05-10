@@ -69,14 +69,18 @@ public class Menu {
 
     public List<Portata> getPortate() {
         return listaPortata;
+        // TODO vedere anche col tutor come gestire questa cosa (valutare instance of)
+        // MenuDAO.selectPortate();
     }
 
     public void addPortata(Portata portata) {
         listaPortata.add(portata);
+        MenuDAO.savePortata(portata);
     }
 
     public void removePortata(Portata portata) {
         listaPortata.remove(portata);
+        MenuDAO.removePortata(portata);
     }
 
     public void addPortate(Collection<Portata> portata) {

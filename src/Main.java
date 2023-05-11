@@ -42,6 +42,11 @@ public class Main {
         ArrayList<AllergensEnum> pannaMirtilliLamponiAllergens = new ArrayList<>(Arrays.asList(AllergensEnum.LATTE));
         ArrayList<AllergensEnum> cremaCatalanaAllergens = new ArrayList<>(Arrays.asList(AllergensEnum.LATTE));
         ArrayList<AllergensEnum> zuccheroFilatoAllergens = new ArrayList<>(Arrays.asList(AllergensEnum.FRUTTAGUSCIO));
+        ArrayList<AllergensEnum> budiniSangueAllergens = new ArrayList<>(Arrays.asList(AllergensEnum.GLUTINE, AllergensEnum.LATTE, AllergensEnum.UOVA));
+        ArrayList<AllergensEnum> carniAllergens = new ArrayList<>(Arrays.asList(AllergensEnum.SOLFITI));
+        ArrayList<AllergensEnum> nodiniAllergens = new ArrayList<>(Arrays.asList(AllergensEnum.SOLFITI, AllergensEnum.SOIA));
+        ArrayList<AllergensEnum> piottinoAllergens = new ArrayList<>(Arrays.asList(AllergensEnum.SOLFITI, AllergensEnum.SESAMO,AllergensEnum.GLUTINE));
+
 
         // PRIMI
         Primo pappardelleAlRaguDiCinghiale = new Primo("Pappardelle al ragù di Cinghiale",6.50, papardelleAllergens );
@@ -54,11 +59,12 @@ public class Main {
         Primo ciorbaDiCapraTransilvana = new Primo("Ciorba di Capra transilvana",10.00, ciorbaAllergens);
 
         // SECONDI
-        Secondo cervelloFrittoDiCapraMontana = new Secondo("Cervello fritto di Capra montana", 12.50);
-        Secondo fegatelliDiAironeGrigioDeiBalcani = new Secondo("Fegatelli di Airone grigio dei Balcani", 11.50);
-        Secondo piottinoDiCinghialeNonSelvaticoAllaVodka = new Secondo("Piottino di Cinghiale non selvatico alla vodka", 9.50);
-        Secondo linguaDiYakBrasata = new Secondo("Lingua di Yak brasata", 16.80);
-        Secondo budiniDiSangueDiMaialeAllevatoAlloStatoBrado = new Secondo("Budini di sangue di Maiale allevato allo stato brado", 18.00);
+        Secondo cervelloFrittoDiCapraMontana = new Secondo("Cervello fritto di Capra montana", 12.50,new ArrayList<>());
+        Secondo fegatelliDiAironeGrigioDeiBalcani = new Secondo("Fegatelli di Airone grigio dei Balcani", 11.50, carniAllergens);
+        Secondo piottinoDiCinghialeNonSelvaticoAllaVodka = new Secondo("Piottino di Cinghiale non selvatico alla vodka", 9.50, piottinoAllergens);
+        Secondo linguaDiYakBrasata = new Secondo("Lingua di Yak brasata", 16.80, carniAllergens);
+        Secondo budiniDiSangueDiMaialeAllevatoAlloStatoBrado = new Secondo("Budini di sangue di Maiale allevato allo stato brado", 18.00, budiniSangueAllergens);
+        Secondo nodiniDiMialeSgorbutico = new Secondo("Nodini di Maiale sgorbutico", 16.80, nodiniAllergens);
 
         // DESSERT
         Dessert nocciolatoCaramellato = new Dessert("Nocciolato Caramellato", 4.00, 20, false, 10, nocciolatoAllergens);
@@ -75,7 +81,7 @@ public class Main {
         menuCompleto.addPortate(Arrays.asList(acqua,pepsi,leffe,bonator,raboso,cabernet,merlot,moscato,pinot,ruou,jagermeister,baileys));
         menuCompleto.addPortate(Arrays.asList(nocciolatoCaramellato,semifreddoAlLimone,salameAlCioccolatoConBacche,pannaFattaInCasaConMirtilliELamponi,cremaCatalana,zuccheroFilato));
         menuCompleto.addPortate(Arrays.asList(pappardelleAlRaguDiCinghiale,gnocchettiAlRisoNeroConCarpaccioDiVitelloCrudoEPeperoni, moussaka, ravioliDiPastaFrescaConRipienoDiVitelloCaprinoEMarsala,fagioliConCostineAffumicate,canederliAllaTirolese,tortelliniInBrodoDiCappone,ciorbaDiCapraTransilvana));
-        menuCompleto.addPortate(Arrays.asList(cervelloFrittoDiCapraMontana,fegatelliDiAironeGrigioDeiBalcani,piottinoDiCinghialeNonSelvaticoAllaVodka,linguaDiYakBrasata,budiniDiSangueDiMaialeAllevatoAlloStatoBrado));
+        menuCompleto.addPortate(Arrays.asList(cervelloFrittoDiCapraMontana,fegatelliDiAironeGrigioDeiBalcani,piottinoDiCinghialeNonSelvaticoAllaVodka,linguaDiYakBrasata,budiniDiSangueDiMaialeAllevatoAlloStatoBrado,nodiniDiMialeSgorbutico));
 
         //TAVOLI
         Tavolo tavolo1 = new Tavolo(1, 4);

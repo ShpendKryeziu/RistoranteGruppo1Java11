@@ -1,13 +1,16 @@
-/**
- * Prenotazione:
+package gestione_prenotazione; /**
+ * gestione_prenotazione.Prenotazione:
  * classe comprendente i field cliente, ristorante, tavolo, numero di persone e fascia oraria.
  * Gli oggetti prenotazione verranno utilizzati dai metodi per creare e gestire prenotazioni.
  */
 
 import enumerators.*;
+import gestione_prenotazione.Cliente;
+import gestione_prenotazione.Ristorante;
+import gestione_prenotazione.Tavolo;
 
 /**
- * Classe Prenotazione
+ * Classe gestione_prenotazione.Prenotazione
  * Comprende il cliente, il ristorante il tavolo, il numero di persone prenotate e una fascia oraria!
  */
 
@@ -20,7 +23,7 @@ public class Prenotazione {
 
     /**
      *
-     * Crea un oggetto Prenotazione con parametri cliente, ristorante, tavolo, numeroDiPersone e fascia oraria!
+     * Crea un oggetto gestione_prenotazione.Prenotazione con parametri cliente, ristorante, tavolo, numeroDiPersone e fascia oraria!
      *
      * @param cliente           il nome del cliente
      * @param ristorante        il nome del ristorante

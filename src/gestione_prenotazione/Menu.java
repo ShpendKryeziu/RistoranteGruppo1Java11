@@ -1,13 +1,18 @@
+package gestione_prenotazione;
+
+import portate.Bevanda;
 import portate.Portata;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import enumerators.*;
+import database.*;
 
 /**
- * Classe Menu!
- * Comprende nome del ristorante, Chef, una descrizione introduttiva, la tipologia di Menu, la lista delle portate.
+ * Classe gestione_prenotazione.Menu!
+ * Comprende nome del ristorante, Chef, una descrizione introduttiva, la tipologia di gestione_prenotazione.Menu, la lista delle portate.
 
  */
 
@@ -17,9 +22,10 @@ public class Menu {
     private String description;
     private TipologiaEnum tipologia;
     private List<Portata> listaPortata;
+    private int menu_id;
 
     /**
-     * Crea un oggetto Menu che ha come parametri il nome del ristorante e dello chef e il tipo di dieta
+     * Crea un oggetto gestione_prenotazione.Menu che ha come parametri il nome del ristorante e dello chef e il tipo di dieta
      *
      * @param name        il nome del ristorante
      * @param chef        il nome dello chef
@@ -69,18 +75,29 @@ public class Menu {
 
     public List<Portata> getPortate() {
         return listaPortata;
-        // TODO vedere anche col tutor come gestire questa cosa (valutare instance of)
+        // TODO vedere anche col tutor come gestire questa cosa (valutare instance of) | generalizzazione e specializzazione
         // MenuDAO.selectPortate();
     }
 
-    public void addPortata(Portata portata) {
+    public void setMenuID(int id) { this.menu_id = id; }
+
+    public Integer getMenuID() {
+        return menu_id;
+    }
+
+    public void addPortata(Portata portata) throws SQLException {
         listaPortata.add(portata);
-        MenuDAO.savePortata(portata);
+        switch (portata.getTipoPortata()) {
+            case BEVANDA -> BevandaDAO.addDrink((Bevanda) portata, menu_id);        // TODO DA COMPLETARE OGNUNO CON LA SUA
+            //case PRIMO ->
+            //case SECONDO ->
+            //case DESSERT ->
+        }
     }
 
     public void removePortata(Portata portata) {
         listaPortata.remove(portata);
-        MenuDAO.removePortata(portata);
+        //MenuDAO.removePortata(portata);
     }
 
     public void addPortate(Collection<Portata> portata) {

@@ -1,3 +1,4 @@
+import gestione_prenotazione.*;
 import portate.Bevanda;
 import portate.Dessert;
 import portate.Primo;
@@ -105,7 +106,7 @@ public class Main {
 
         //menuCompleto.printMenu();
         ristoranteGruppo1.menuPerTipologia(TipologiaEnum.VEGANO);
-        System.out.println("Prezzo Medio Menu Completo (NO BEVANDE) = " + menuCompleto.averagePrice() + " Euri");
+        System.out.println("Prezzo Medio gestione_prenotazione.Menu Completo (NO BEVANDE) = " + menuCompleto.averagePrice() + " Euri");
 
         //Prova prenotazione
         Cliente alberto = new Cliente("Albilug", "Alberto", "Lugato", "333333",
